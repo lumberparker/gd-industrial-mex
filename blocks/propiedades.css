@@ -58,6 +58,22 @@
   background: #00c4b5;
 }
 
+@media (max-width: 1024px) {
+  .propiedades__container {
+    grid-template-columns: 1fr;
+  }
+
+  .propiedades__card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 40px 32px;
+  }
+
+  .propiedades__card:last-child {
+    border-bottom: none;
+  }
+}
+
 /* ── Icon ── */
 .propiedades__icon {
   width: 48px;

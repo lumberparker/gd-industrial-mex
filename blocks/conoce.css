@@ -73,6 +73,39 @@
   letter-spacing: 1px;
 }
 
+@media (max-width: 1024px) {
+  .conoce__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .conoce__stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .conoce__stat {
+    flex: 1 1 45%;
+    padding: 24px 0 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .conoce__stats {
+    flex-direction: column;
+  }
+
+  .conoce__stat {
+    flex: none;
+    padding: 20px 0 20px 18px;
+  }
+
+  .conoce__stat-number {
+    font-size: 42px;
+  }
+}
+
 /* ── Stats column ── */
 .conoce__stats {
   display: flex;

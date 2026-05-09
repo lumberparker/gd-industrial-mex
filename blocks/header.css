@@ -117,6 +117,107 @@
   color: #0f2433;
 }
 
+/* ── Hamburger button (hidden on desktop) ── */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+  z-index: 101;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.header__hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__hamburger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.header__hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Responsive header ── */
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    background: rgba(8, 18, 27, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    align-items: center;
+    padding: 0 var(--pad-x);
+    border-bottom: 1px solid rgba(0, 180, 166, 0.15);
+  }
+
+  .header__logo {
+    padding: 14px 0;
+  }
+
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__nav {
+    display: none;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: rgba(8, 18, 27, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 16px var(--pad-x) 28px;
+    border-bottom: 1px solid rgba(0, 180, 166, 0.15);
+    border-bottom-left-radius: 0;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    margin-left: 0;
+  }
+
+  .header__nav--open {
+    display: block;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header__nav-link {
+    display: block;
+    padding: 14px 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .header__nav-link:hover {
+    color: var(--color-teal);
+  }
+
+  .header__nav-item--active .header__nav-link {
+    color: var(--color-teal);
+  }
+
+  .header__nav-item--active .header__nav-link::after {
+    display: none;
+  }
+
+  .header__nav-item:last-child .header__nav-link {
+    border-bottom: none;
+  }
+}
+
 /* Active indicator */
 .header__nav-item--active .header__nav-link {
   font-weight: 700;

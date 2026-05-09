@@ -152,3 +152,25 @@
 .showcase__cta:hover {
   letter-spacing: 1.5px;
 }
+
+@media (max-width: 1024px) {
+  .showcase__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .showcase__visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase__model {
+    width: 220px;
+    height: 220px;
+  }
+
+  .showcase__ring--1 { width: 220px; height: 220px; }
+  .showcase__ring--2 { width: 168px; height: 168px; }
+  .showcase__ring--3 { width: 116px; height: 116px; }
+}

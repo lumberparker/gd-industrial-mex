@@ -6,7 +6,10 @@
       "mcp__Claude_in_Chrome__navigate",
       "mcp__Claude_in_Chrome__get_page_text",
       "mcp__Claude_in_Chrome__read_page",
-      "Bash(git --version)"
+      "Bash(git --version)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('html_url'\\) or d.get\\('message'\\)\\)\")",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }

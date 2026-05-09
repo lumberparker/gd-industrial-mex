@@ -481,3 +481,40 @@
 .productos__empty--visible {
   display: block;
 }
+
+@media (max-width: 1024px) {
+  .acordeon__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .acordeon__trigger {
+    padding: 18px 20px;
+  }
+
+  .acordeon__panel-inner {
+    padding: 0 16px 20px;
+  }
+
+  .acordeon__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acordeon__trigger-right {
+    gap: 8px;
+  }
+
+  .acordeon__count {
+    font-size: 18px;
+  }
+
+  .productos__fab-logos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .productos__fab-logo {
+    font-size: 22px;
+  }
+}

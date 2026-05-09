@@ -73,6 +73,20 @@ svg {
   margin-bottom: 14px;
 }
 
+/* ── Global overflow lock — prevents horizontal scroll ── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ── Mobile token overrides ── */
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 20px;
+    --pad-section: 56px;
+  }
+}
+
 /* ── WhatsApp floating button ── */
 .whatsapp-float {
   position: fixed;
