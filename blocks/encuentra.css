@@ -1,0 +1,193 @@
+/* ========================
+   ENCUENTRA — Contact
+   ======================== */
+
+.encuentra {
+  padding: var(--pad-section) 0;
+  background: var(--color-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.encuentra::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 180, 166, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.encuentra__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* ── Info column ── */
+.encuentra__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 16px;
+}
+
+.encuentra__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  color: var(--color-white);
+  letter-spacing: 1px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.encuentra__body {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+.encuentra__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.encuentra__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25d366;
+  color: white;
+  padding: 15px 26px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  align-self: flex-start;
+}
+
+.encuentra__whatsapp:hover {
+  background: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+.encuentra__whatsapp svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.encuentra__contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.encuentra__contact-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+.encuentra__contact-value {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ── Form ── */
+.encuentra__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.encuentra__field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.encuentra__field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.encuentra__input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 13px 16px;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.encuentra__input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.encuentra__input:focus {
+  border-color: var(--color-teal);
+  background: rgba(0, 180, 166, 0.06);
+}
+
+.encuentra__select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300b4a6' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.encuentra__textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.encuentra__submit {
+  background: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 36px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.encuentra__submit:hover {
+  background: var(--color-orange-h);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 97, 26, 0.3);
+}
+
+.encuentra__submit--sent {
+  background: #25d366 !important;
+  transform: none !important;
+}

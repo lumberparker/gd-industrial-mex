@@ -1,0 +1,118 @@
+/* ========================
+   PRESENTACIONES — Industries
+   ======================== */
+
+.presentaciones {
+  padding: var(--pad-section) 0;
+  background: var(--color-off-white);
+}
+
+.presentaciones__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+.presentaciones__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.presentaciones__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 14px;
+}
+
+.presentaciones__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  color: var(--color-navy);
+  letter-spacing: 1px;
+}
+
+.presentaciones__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.presentaciones__item {
+  background: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.presentaciones__item:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 48px rgba(15, 36, 51, 0.14);
+}
+
+/* ── Image placeholder (replace with real background-image) ── */
+.presentaciones__img {
+  height: 190px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.presentaciones__img--oil {
+  background: linear-gradient(145deg, #0f2030 0%, #1a3a52 60%, #1a3040 100%);
+  /* background-image: url('../assets/images/industry-oil.jpg'); */
+}
+
+.presentaciones__img--construction {
+  background: linear-gradient(145deg, #1a1208 0%, #4a2e10 60%, #3a2010 100%);
+  /* background-image: url('../assets/images/industry-construction.jpg'); */
+}
+
+.presentaciones__img--energy {
+  background: linear-gradient(145deg, #081a10 0%, #0f3d22 60%, #0a2a18 100%);
+  /* background-image: url('../assets/images/industry-energy.jpg'); */
+}
+
+.presentaciones__img--mining {
+  background: linear-gradient(145deg, #181408 0%, #3d3010 60%, #2a2008 100%);
+  /* background-image: url('../assets/images/industry-mining.jpg'); */
+}
+
+/* Teal accent line at bottom of image */
+.presentaciones__img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-teal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.presentaciones__item:hover .presentaciones__img-overlay {
+  transform: scaleX(1);
+}
+
+.presentaciones__info {
+  padding: 22px 24px 28px;
+}
+
+.presentaciones__name {
+  font-family: var(--font-display);
+  font-size: 19px;
+  color: var(--color-navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.presentaciones__desc {
+  font-size: 13px;
+  color: var(--color-gray);
+  line-height: 1.75;
+}

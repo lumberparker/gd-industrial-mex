@@ -1,0 +1,110 @@
+/* ========================
+   CONOCE
+   ======================== */
+
+.conoce {
+  padding: var(--pad-section) 0;
+  background: var(--color-white);
+}
+
+.conoce__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 88px;
+  align-items: center;
+}
+
+.conoce__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 16px;
+}
+
+.conoce__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.2vw, 46px);
+  color: var(--color-navy);
+  line-height: 1.05;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+}
+
+.conoce__body {
+  font-size: 15px;
+  color: var(--color-gray);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.conoce__quote {
+  border-left: 3px solid var(--color-teal);
+  padding: 14px 20px;
+  background: var(--color-off-white);
+  border-radius: 0 6px 6px 0;
+  font-size: 14px;
+  color: var(--color-navy);
+  font-style: italic;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.conoce__quote strong {
+  font-style: normal;
+  color: var(--color-teal);
+}
+
+.conoce__cta {
+  display: inline-block;
+  color: var(--color-orange);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: letter-spacing 0.2s;
+}
+
+.conoce__cta:hover {
+  letter-spacing: 1px;
+}
+
+/* ── Stats column ── */
+.conoce__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.conoce__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 32px 0 32px 28px;
+  border-left: 3px solid var(--color-border);
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.conoce__stat:hover {
+  border-left-color: var(--color-teal);
+}
+
+.conoce__stat-number {
+  font-family: var(--font-display);
+  font-size: 58px;
+  color: var(--color-navy);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.conoce__stat-label {
+  font-size: 13px;
+  color: var(--color-gray);
+  line-height: 1.5;
+  max-width: 220px;
+}

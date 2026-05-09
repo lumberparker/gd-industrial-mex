@@ -1,0 +1,101 @@
+/* ========================
+   PAGE — Global tokens & resets
+   ======================== */
+
+:root {
+  --color-navy:       #0f2433;
+  --color-navy-mid:   #162d3d;
+  --color-navy-light: #1e3d52;
+  --color-teal:       #00bfaf;
+  --color-teal-light: #00d4c2;
+  --color-orange:     #e8611a;
+  --color-orange-h:   #d4541a;
+  --color-amber:      #e8a020;
+  --color-white:      #ffffff;
+  --color-off-white:  #f4f6f8;
+  --color-gray:       #7a90a8;
+  --color-steel:      #3d5166;
+  --color-border:     #dce8f0;
+  --color-footer-bg:  #080f15;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Roboto', sans-serif;
+
+  --container: 1200px;
+  --pad-section: 96px;
+  --pad-x: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-white);
+  color: var(--color-navy);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Shared label style ── */
+.section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-bottom: 14px;
+}
+
+/* ── WhatsApp floating button ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 990;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}

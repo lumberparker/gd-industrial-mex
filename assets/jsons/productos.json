@@ -1,0 +1,149 @@
+{
+  "fabricantes": ["Mecanotecnica", "Ruadigon"],
+  "categorias": [
+    {
+      "id": "embragues-frenos",
+      "nombre": "Embragues y Frenos Neumáticos",
+      "fabricante": "Ruadigon",
+      "icono": "gear",
+      "productos": [
+        {
+          "id": "serie-cb",
+          "nombre": "Embrague Neumático Serie CB",
+          "imagen": null,
+          "descripcion": "Embrague neumático de alta capacidad para equipos de perforación y prensas industriales.",
+          "productosIncluidos": ["CB-10", "CB-20", "CB-30", "CB-40", "CB-50"],
+          "catalogoPdf": null
+        },
+        {
+          "id": "serie-vc",
+          "nombre": "Embrague Neumático Serie VC",
+          "imagen": null,
+          "descripcion": "Serie de alta velocidad para aplicaciones de corte y estampado industrial.",
+          "productosIncluidos": ["VC-20", "VC-30", "VC-40"],
+          "catalogoPdf": null
+        },
+        {
+          "id": "serie-eb",
+          "nombre": "Freno Neumático Serie EB",
+          "imagen": null,
+          "descripcion": "Freno de disco neumático para control de velocidad en maquinaria pesada.",
+          "productosIncluidos": ["EB-10", "EB-20", "EB-30"],
+          "catalogoPdf": null
+        },
+        {
+          "id": "serie-er",
+          "nombre": "Freno Neumático Serie ER",
+          "imagen": null,
+          "descripcion": "Freno de tambor para aplicaciones de perforación y equipos de izaje de alta exigencia.",
+          "productosIncluidos": ["ER-20", "ER-30", "ER-40", "ER-50"],
+          "catalogoPdf": null
+        }
+      ]
+    },
+    {
+      "id": "coples-flexibles",
+      "nombre": "Coples Flexibles",
+      "fabricante": "Mecanotecnica",
+      "icono": "coupling",
+      "productos": [
+        {
+          "id": "cople-tipo-x",
+          "nombre": "Cople Universal Tipo X",
+          "imagen": null,
+          "descripcion": "El más versátil de la línea. Absorbe desalineaciones radiales, angulares y axiales sin necesidad de mantenimiento.",
+          "productosIncluidos": ["X-070", "X-090", "X-110", "X-140", "X-180", "X-225", "X-285"],
+          "catalogoPdf": null
+        },
+        {
+          "id": "acoples-dentados",
+          "nombre": "Acoples Dentados de Acero",
+          "imagen": null,
+          "descripcion": "Transmisión de par de alta capacidad mediante perfil dentado de acero tratado térmicamente.",
+          "productosIncluidos": ["AD-1", "AD-2", "AD-3", "AD-4", "AD-5"],
+          "catalogoPdf": null
+        }
+      ]
+    },
+    {
+      "id": "uniones-giratorias",
+      "nombre": "Uniones Giratorias Neumáticas",
+      "fabricante": null,
+      "icono": "union",
+      "productos": [
+        {
+          "id": "union-petroleo",
+          "nombre": "Unión Giratoria — Perforación Petrolera",
+          "imagen": null,
+          "descripcion": "Para equipos rotatorios de perforación de petróleo. Diseñada para alta presión y temperatura continua.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        },
+        {
+          "id": "union-agua",
+          "nombre": "Unión Giratoria — Perforación Acuífera",
+          "imagen": null,
+          "descripcion": "Para equipos de perforación de pozos de agua. Diseño compacto y de bajo mantenimiento en campo.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        }
+      ]
+    },
+    {
+      "id": "valvulas",
+      "nombre": "Válvulas Neumáticas",
+      "fabricante": null,
+      "icono": "valve",
+      "productos": [
+        {
+          "id": "valvula-maniobras",
+          "nombre": "Válvula para Cuadro de Maniobras",
+          "imagen": null,
+          "descripcion": "Control neumático para cuadros de maniobras de equipos perforadores. Alta confiabilidad en campo.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        }
+      ]
+    },
+    {
+      "id": "materiales-hule",
+      "nombre": "Materiales de Hule",
+      "fabricante": null,
+      "icono": "drum",
+      "productos": [
+        {
+          "id": "hule-puentes",
+          "nombre": "Hule para Puentes y Obra Civil",
+          "imagen": null,
+          "descripcion": "Apoyos elastoméricos para puentes. Cumple normativas internacionales de ingeniería estructural.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        },
+        {
+          "id": "hule-perforacion",
+          "nombre": "Hule para Perforación y Producción",
+          "imagen": null,
+          "descripcion": "Materiales resistentes a hidrocarburos para aplicaciones en campo petrolero y acuífero.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        }
+      ]
+    },
+    {
+      "id": "herramientas-pesca",
+      "nombre": "Herramientas de Pesca",
+      "fabricante": null,
+      "icono": "star",
+      "productos": [
+        {
+          "id": "fishing-tools",
+          "nombre": "Fishing Tools — Industria Petrolera y Acuífera",
+          "imagen": null,
+          "descripcion": "Herramientas especializadas para la recuperación de objetos atrapados en pozos de petróleo y agua.",
+          "productosIncluidos": [],
+          "catalogoPdf": null
+        }
+      ]
+    }
+  ]
+}

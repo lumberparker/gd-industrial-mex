@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G&D Industrial-Mex — Transmisión de Potencia Industrial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <div class="loader__inner">
+        <div class="loader__logo">G<span>&amp;</span>D</div>
+        <div class="loader__sub">Industrial-Mex</div>
+        <div class="loader__bar"><span></span></div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <a href="#inicio" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="20" fill="none" stroke="#00b4a6" stroke-width="2"/>
+          <circle cx="22" cy="22" r="7" fill="#00b4a6"/>
+          <path d="M22 5 A17 17 0 0 1 39 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 39 A17 17 0 0 1 5 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="header__logo-text">
+          <span class="header__logo-brand">G&amp;D</span>
+          <span class="header__logo-sub">Industrial-Mex</span>
+        </div>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item header__nav-item--active">
+            <a href="#inicio" class="header__nav-link">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#nosotros" class="header__nav-link">Sobre Nosotros</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#industrias" class="header__nav-link">Servicios</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#contacto" class="header__nav-link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Distribuidores autorizados · Mecanotecnica · Ruadigon</p>
+        <h1 class="hero__title">IMPULSAMOS<br>LA CONTINUIDAD<br>DE TU INDUSTRIA.</h1>
+        <h2 class="hero__subtitle">Soluciones en partes y componentes industriales</h2>
+        <p class="hero__slogan">Refacciones industriales de la más alta calidad que reducen costos, alargan la vida útil de sus equipos y cuidan el medio ambiente.</p>
+        <div class="hero__actions">
+          <a href="#nosotros" class="hero__btn hero__btn--primary">Sobre G&amp;D</a>
+          <a href="#productos" class="hero__btn hero__btn--secondary">Productos <span class="hero__btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Industria Petrolera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Cementera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Siderúrgica</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Papelera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Tenerías</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Alimentos y Bebidas</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Farmacéutica</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Minería</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Transmisión de Potencia</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Industria Petrolera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Cementera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Siderúrgica</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Papelera</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Tenerías</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Alimentos y Bebidas</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Farmacéutica</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Minería</span>
+        <span class="marquee__sep">·</span>
+        <span class="marquee__item">Transmisión de Potencia</span>
+        <span class="marquee__sep">·</span>
+      </div>
+    </div>
+
+    <!-- CONOCE -->
+    <section class="conoce" id="nosotros">
+      <div class="conoce__container">
+        <div class="conoce__text">
+          <span class="conoce__label">Quiénes somos</span>
+          <h2 class="conoce__title">Más de 40 años de experiencia en refacciones industriales</h2>
+          <p class="conoce__body">G&amp;D Industrial-Mex fue fundada en México en 2003. Somos distribuidores master de Mecanotecnica (Argentina) y Ruadigon, lo que nos da soporte técnico directo y autoridad para hacer válidas las garantías — nunca estará abandonado.</p>
+          <p class="conoce__body">Con la experiencia acumulada en 40 años de trabajo, hoy también fabricamos ciertos productos manufacturados con materiales de alta calidad, sometidos a rigurosas pruebas para competir y satisfacer las necesidades del mercado nacional e internacional.</p>
+          <blockquote class="conoce__quote">Nuestra misión: proveer al mercado nacional e internacional con productos industriales de alta calidad, <strong>tecnológicamente avanzados y ecológicamente responsables.</strong></blockquote>
+          <a href="#contacto" class="conoce__cta">Permítanos asesorarle →</a>
+        </div>
+        <div class="conoce__stats">
+          <div class="conoce__stat">
+            <span class="conoce__stat-number">2003</span>
+            <span class="conoce__stat-label">Año de fundación en México</span>
+          </div>
+          <div class="conoce__stat">
+            <span class="conoce__stat-number">40+</span>
+            <span class="conoce__stat-label">Años de experiencia acumulada en el sector industrial</span>
+          </div>
+          <div class="conoce__stat">
+            <span class="conoce__stat-number">9+</span>
+            <span class="conoce__stat-label">Industrias atendidas: petrolera, cementera, siderúrgica, papelera, farmacéutica y más</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES -->
+    <section class="propiedades">
+      <div class="propiedades__container">
+        <div class="propiedades__card">
+          <div class="propiedades__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4L6 12v10c0 11 7.7 21.3 18 24 10.3-2.7 18-13 18-24V12L24 4z"/>
+              <polyline points="16,24 22,30 32,18"/>
+            </svg>
+          </div>
+          <h3 class="propiedades__title">Calidad</h3>
+          <p class="propiedades__body">Productos TOP mundial de fabricantes reconocidos. Cada componente está respaldado por estándares internacionales de la industria más exigente.</p>
+        </div>
+        <div class="propiedades__card propiedades__card--accent">
+          <div class="propiedades__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="18"/>
+              <polyline points="24,14 24,24 31,31"/>
+            </svg>
+          </div>
+          <h3 class="propiedades__title">Servicio</h3>
+          <p class="propiedades__body">Stock inmediato y atención 24/7 incluyendo domingos y festivos. Cuando la industria para, G&amp;D no para.</p>
+        </div>
+        <div class="propiedades__card">
+          <div class="propiedades__icon">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="20" width="32" height="22" rx="2"/>
+              <path d="M16 20v-6a8 8 0 0 1 16 0v6"/>
+              <circle cx="24" cy="31" r="3" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="propiedades__title">Garantía</h3>
+          <p class="propiedades__body">Respaldo directo del fabricante. Ofrecemos garantía real porque sabemos que la confianza se gana con hechos, no con palabras.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESENTACIONES (Industries) -->
+    <section class="presentaciones" id="industrias">
+      <div class="presentaciones__container">
+        <div class="presentaciones__header">
+          <span class="presentaciones__label">Industrias que atendemos</span>
+          <h2 class="presentaciones__title">Presencia donde la industria más lo necesita</h2>
+        </div>
+        <div class="presentaciones__grid">
+          <article class="presentaciones__item">
+            <div class="presentaciones__img presentaciones__img--oil">
+              <div class="presentaciones__img-overlay"></div>
+            </div>
+            <div class="presentaciones__info">
+              <h3 class="presentaciones__name">Perforación Petrolera y Acuífera</h3>
+              <p class="presentaciones__desc">Embragues, frenos neumáticos, válvulas y herramientas de pesca para equipos de perforación de alta exigencia.</p>
+            </div>
+          </article>
+          <article class="presentaciones__item">
+            <div class="presentaciones__img presentaciones__img--construction">
+              <div class="presentaciones__img-overlay"></div>
+            </div>
+            <div class="presentaciones__info">
+              <h3 class="presentaciones__name">Construcción</h3>
+              <p class="presentaciones__desc">Materiales de hule para puentes y obra civil. Productos que cumplen las normas más estrictas de ingeniería estructural.</p>
+            </div>
+          </article>
+          <article class="presentaciones__item">
+            <div class="presentaciones__img presentaciones__img--energy">
+              <div class="presentaciones__img-overlay"></div>
+            </div>
+            <div class="presentaciones__info">
+              <h3 class="presentaciones__name">Energía y Transmisión</h3>
+              <p class="presentaciones__desc">Coples flexibles y sistemas de transmisión para plantas de energía, bombeo y procesos industriales continuos.</p>
+            </div>
+          </article>
+          <article class="presentaciones__item">
+            <div class="presentaciones__img presentaciones__img--mining">
+              <div class="presentaciones__img-overlay"></div>
+            </div>
+            <div class="presentaciones__info">
+              <h3 class="presentaciones__name">Minería y Procesos Pesados</h3>
+              <p class="presentaciones__desc">Componentes de alta resistencia para minería, trituración y procesos productivos bajo condiciones extremas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE (Featured product) -->
+    <section class="showcase">
+      <div class="showcase__container">
+        <div class="showcase__visual">
+          <div class="showcase__model">
+            <div class="showcase__ring showcase__ring--1"></div>
+            <div class="showcase__ring showcase__ring--2"></div>
+            <div class="showcase__ring showcase__ring--3"></div>
+            <div class="showcase__model-core">
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <circle cx="40" cy="40" r="30" stroke="#00b4a6" stroke-width="2" stroke-dasharray="6 4"/>
+                <circle cx="40" cy="40" r="18" stroke="#00b4a6" stroke-width="2.5"/>
+                <circle cx="40" cy="40" r="8" fill="#00b4a6" opacity="0.3"/>
+                <circle cx="40" cy="40" r="4" fill="#00b4a6"/>
+                <line x1="40" y1="10" x2="40" y2="22" stroke="#00b4a6" stroke-width="2" stroke-linecap="round"/>
+                <line x1="40" y1="58" x2="40" y2="70" stroke="#00b4a6" stroke-width="2" stroke-linecap="round"/>
+                <line x1="10" y1="40" x2="22" y2="40" stroke="#00b4a6" stroke-width="2" stroke-linecap="round"/>
+                <line x1="58" y1="40" x2="70" y2="40" stroke="#00b4a6" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <p class="showcase__model-caption">Cople Flexible Tipo X — Modelo interactivo próximamente</p>
+        </div>
+        <div class="showcase__info">
+          <span class="showcase__label">Servicio de Reparación</span>
+          <h2 class="showcase__title">Reparación de Embragues y Frenos Neumáticos</h2>
+          <p class="showcase__body">Reparamos embragues y frenos neumáticos ventilados tipo VC con garantía. Contamos con las piezas necesarias en stock para reducir al mínimo el tiempo de paro de sus equipos.</p>
+          <ul class="showcase__features">
+            <li class="showcase__feature">Cámara de aire</li>
+            <li class="showcase__feature">Balatas y porta-balatas de aluminio</li>
+            <li class="showcase__feature">Barras de fuerza y muelles libradores</li>
+            <li class="showcase__feature">Tapas laterales, housing y codos</li>
+            <li class="showcase__feature">Próximamente: reparación de válvulas y actuadores neumáticos</li>
+          </ul>
+          <a href="#contacto" class="showcase__cta">Solicitar diagnóstico →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS — rendered by scripts/productos.js from assets/jsons/productos.json -->
+    <section class="productos" id="productos">
+      <div class="productos__container">
+
+        <div class="productos__header">
+          <span class="productos__label">Catálogo</span>
+          <h2 class="productos__title">Nuestros Productos</h2>
+          <p class="productos__intro">Distribuimos líneas completas de Mecanotecnica y Ruadigon. Selecciona una categoría para ver fichas técnicas y descargar catálogos en PDF.</p>
+        </div>
+
+        <!-- Filter chips — injected by productos.js -->
+        <div class="productos__filters" id="productosFilters" role="group" aria-label="Filtrar por fabricante"></div>
+
+        <!-- Accordion — injected by productos.js -->
+        <div class="productos__acordeon" id="productosAcordeon"></div>
+
+        <!-- Fabricantes bar — injected by productos.js -->
+        <div class="productos__fabricantes">
+          <p class="productos__fab-label">Distribuidores autorizados de</p>
+          <div class="productos__fab-logos" id="fabricantesLogos"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENCUENTRA (Contact) -->
+    <section class="encuentra" id="contacto">
+      <div class="encuentra__container">
+        <div class="encuentra__info">
+          <span class="encuentra__label">Contáctanos</span>
+          <h2 class="encuentra__title">Estamos donde usted tiene un problema.</h2>
+          <p class="encuentra__body">Permítanos asesorarle y ofrecerle la solución adecuada. Nuestro equipo está disponible 24 horas al día, 7 días a la semana — incluyendo domingos y festivos.</p>
+          <div class="encuentra__channels">
+            <a href="https://wa.me/523339555895" class="encuentra__whatsapp" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.882l6.184-1.622A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.006-1.374l-.36-.213-3.713.973.99-3.63-.234-.374A9.782 9.782 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/>
+              </svg>
+              WhatsApp — Gustavo De Oliveira
+            </a>
+            <div class="encuentra__contact-item">
+              <span class="encuentra__contact-label">Ventas</span>
+              <span class="encuentra__contact-value">ventas@indusmex.com</span>
+            </div>
+            <div class="encuentra__contact-item">
+              <span class="encuentra__contact-label">Consultas técnicas</span>
+              <span class="encuentra__contact-value">consultas@indusmex.com</span>
+            </div>
+            <div class="encuentra__contact-item">
+              <span class="encuentra__contact-label">Teléfono</span>
+              <span class="encuentra__contact-value">(+52) 33 3614-0123 — Líneas rotativas</span>
+            </div>
+            <div class="encuentra__contact-item">
+              <span class="encuentra__contact-label">Oficina</span>
+              <span class="encuentra__contact-value">Av. Federalismo Sur 869-A, Col. Moderna<br>Guadalajara, Jalisco, México CP 44190</span>
+            </div>
+          </div>
+        </div>
+        <form class="encuentra__form" id="contactForm" novalidate>
+          <div class="encuentra__field">
+            <label class="encuentra__field-label" for="nombre">Nombre completo</label>
+            <input class="encuentra__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="encuentra__field">
+            <label class="encuentra__field-label" for="empresa">Empresa</label>
+            <input class="encuentra__input" type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" />
+          </div>
+          <div class="encuentra__field">
+            <label class="encuentra__field-label" for="producto">Producto de interés</label>
+            <select class="encuentra__input encuentra__select" id="producto" name="producto">
+              <option value="" disabled selected>Selecciona una categoría</option>
+              <!-- Options injected by encuentra.js from assets/jsons/productos.json -->
+            </select>
+          </div>
+          <div class="encuentra__field">
+            <label class="encuentra__field-label" for="mensaje">Mensaje</label>
+            <textarea class="encuentra__input encuentra__textarea" id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu necesidad..." rows="4" required></textarea>
+          </div>
+          <button class="encuentra__submit" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="20" fill="none" stroke="#00b4a6" stroke-width="2"/>
+              <circle cx="22" cy="22" r="7" fill="#00b4a6"/>
+              <path d="M22 5 A17 17 0 0 1 39 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+              <path d="M22 39 A17 17 0 0 1 5 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="footer__logo-text">
+              <span class="footer__logo-brand">G&amp;D</span>
+              <span class="footer__logo-sub">Industrial-Mex</span>
+            </div>
+          </a>
+          <p class="footer__tagline">Transmisión de potencia industrial.<br>Calidad, servicio y garantía.</p>
+        </div>
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">Navegación</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#inicio" class="footer__nav-link">Home</a></li>
+            <li><a href="#nosotros" class="footer__nav-link">Sobre Nosotros</a></li>
+            <li><a href="#industrias" class="footer__nav-link">Industrias</a></li>
+            <li><a href="#productos" class="footer__nav-link">Productos</a></li>
+            <li><a href="#contacto" class="footer__nav-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__products">
+          <h4 class="footer__nav-title">Productos</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#productos" class="footer__nav-link">Embragues Neumáticos</a></li>
+            <li><a href="#productos" class="footer__nav-link">Frenos Neumáticos</a></li>
+            <li><a href="#productos" class="footer__nav-link">Coples Flexibles</a></li>
+            <li><a href="#productos" class="footer__nav-link">Válvulas Neumáticas</a></li>
+            <li><a href="#productos" class="footer__nav-link">Materiales de Hule</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4 class="footer__nav-title">Contacto</h4>
+          <p class="footer__contact-item">(+52) 33 3614-0123</p>
+          <p class="footer__contact-item">ventas@indusmex.com</p>
+          <p class="footer__contact-item">consultas@indusmex.com</p>
+          <p class="footer__contact-item">Av. Federalismo Sur 869-A<br>Col. Moderna, Guadalajara, Jal.</p>
+          <a href="https://wa.me/523339555895" class="footer__whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 G&amp;D Industrial-Mex S.A. de C.V. — Todos los derechos reservados</p>
+        <p class="footer__credit">Diseño por Berries &amp; Mango</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/523339555895" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.882l6.184-1.622A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.006-1.374l-.36-.213-3.713.973.99-3.63-.234-.374A9.782 9.782 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/>
+      </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/hero.js"></script>
+    <script src="scripts/marquee.js"></script>
+    <script src="scripts/conoce.js"></script>
+    <script src="scripts/propiedades.js"></script>
+    <script src="scripts/presentaciones.js"></script>
+    <script src="scripts/showcase.js"></script>
+    <script src="scripts/productos.js"></script>
+    <script src="scripts/encuentra.js"></script>
+    <script src="scripts/footer.js"></script>
+
+  </body>
+</html>
