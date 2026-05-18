@@ -252,13 +252,24 @@ fetch('assets/jsons/productos.json')
     const logosEl    = document.getElementById('fabricantesLogos');
 
     if (acordeonEl) {
-      acordeonEl.innerHTML = data.categorias
+      /* Landing page: only show productoPrincipal === true cards per category */
+      const principalData = data.categorias
+        .map(cat => ({
+          ...cat,
+          productos: cat.productos.filter(p => p.productoPrincipal === true)
+        }))
+        .filter(cat => cat.productos.length > 0);
+
+      acordeonEl.innerHTML = principalData
         .map((cat, i) => buildAcordeonItem(cat, i))
         .join('');
       initAccordion(acordeonEl);
     }
 
     if (filtersEl && acordeonEl) {
+      const principalData = data.categorias
+        .map(cat => ({ ...cat, productos: cat.productos.filter(p => p.productoPrincipal) }))
+        .filter(cat => cat.productos.length > 0);
       initFilters(filtersEl, acordeonEl, data.fabricantes);
     }
 

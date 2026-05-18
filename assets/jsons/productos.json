@@ -6,34 +6,39 @@
       "nombre": "Embragues y Frenos Neumáticos",
       "fabricante": "Ruadigon",
       "icono": "gear",
+      "descripcionCorta": "Embragues y frenos de disco neumáticos para equipos de perforación, prensas y maquinaria pesada.",
       "productos": [
         {
           "id": "serie-cb",
           "nombre": "Embrague Neumático Serie CB",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "Embrague neumático de alta capacidad para equipos de perforación y prensas industriales.",
+          "descripcion": "Embrague neumático de alta capacidad para equipos de perforación y prensas industriales. Diseño robusto para ciclos continuos.",
           "productosIncluidos": ["CB-10", "CB-20", "CB-30", "CB-40", "CB-50"],
           "catalogoPdf": null
         },
         {
           "id": "serie-vc",
           "nombre": "Embrague Neumático Serie VC",
+          "productoPrincipal": false,
           "imagen": null,
-          "descripcion": "Serie de alta velocidad para aplicaciones de corte y estampado industrial.",
+          "descripcion": "Serie de alta velocidad para aplicaciones de corte y estampado industrial. Respuesta rápida y alta frecuencia de ciclado.",
           "productosIncluidos": ["VC-20", "VC-30", "VC-40"],
           "catalogoPdf": null
         },
         {
           "id": "serie-eb",
           "nombre": "Freno Neumático Serie EB",
+          "productoPrincipal": false,
           "imagen": null,
-          "descripcion": "Freno de disco neumático para control de velocidad en maquinaria pesada.",
+          "descripcion": "Freno de disco neumático para control de velocidad en maquinaria pesada. Alta disipación de calor.",
           "productosIncluidos": ["EB-10", "EB-20", "EB-30"],
           "catalogoPdf": null
         },
         {
           "id": "serie-er",
           "nombre": "Freno Neumático Serie ER",
+          "productoPrincipal": false,
           "imagen": null,
           "descripcion": "Freno de tambor para aplicaciones de perforación y equipos de izaje de alta exigencia.",
           "productosIncluidos": ["ER-20", "ER-30", "ER-40", "ER-50"],
@@ -46,20 +51,23 @@
       "nombre": "Coples Flexibles",
       "fabricante": "Mecanotecnica",
       "icono": "coupling",
+      "descripcionCorta": "Coples elásticos y dentados para transmisión de par con compensación de desalineaciones.",
       "productos": [
         {
           "id": "cople-tipo-x",
           "nombre": "Cople Universal Tipo X",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "El más versátil de la línea. Absorbe desalineaciones radiales, angulares y axiales sin necesidad de mantenimiento.",
+          "descripcion": "El más versátil de la línea. Absorbe desalineaciones radiales, angulares y axiales sin necesidad de mantenimiento. Elemento elástico en poliuretano.",
           "productosIncluidos": ["X-070", "X-090", "X-110", "X-140", "X-180", "X-225", "X-285"],
           "catalogoPdf": null
         },
         {
           "id": "acoples-dentados",
           "nombre": "Acoples Dentados de Acero",
+          "productoPrincipal": false,
           "imagen": null,
-          "descripcion": "Transmisión de par de alta capacidad mediante perfil dentado de acero tratado térmicamente.",
+          "descripcion": "Transmisión de par de alta capacidad mediante perfil dentado de acero tratado térmicamente. Para cargas de choque y reversibles.",
           "productosIncluidos": ["AD-1", "AD-2", "AD-3", "AD-4", "AD-5"],
           "catalogoPdf": null
         }
@@ -70,18 +78,21 @@
       "nombre": "Uniones Giratorias Neumáticas",
       "fabricante": null,
       "icono": "union",
+      "descripcionCorta": "Uniones giratorias para equipos rotatorios de perforación petrolera y acuífera.",
       "productos": [
         {
           "id": "union-petroleo",
           "nombre": "Unión Giratoria — Perforación Petrolera",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "Para equipos rotatorios de perforación de petróleo. Diseñada para alta presión y temperatura continua.",
+          "descripcion": "Para equipos rotatorios de perforación de petróleo. Diseñada para alta presión y temperatura continua en campo.",
           "productosIncluidos": [],
           "catalogoPdf": null
         },
         {
           "id": "union-agua",
           "nombre": "Unión Giratoria — Perforación Acuífera",
+          "productoPrincipal": false,
           "imagen": null,
           "descripcion": "Para equipos de perforación de pozos de agua. Diseño compacto y de bajo mantenimiento en campo.",
           "productosIncluidos": [],
@@ -94,12 +105,14 @@
       "nombre": "Válvulas Neumáticas",
       "fabricante": null,
       "icono": "valve",
+      "descripcionCorta": "Válvulas de control neumático para cuadros de maniobras y equipos perforadores.",
       "productos": [
         {
           "id": "valvula-maniobras",
           "nombre": "Válvula para Cuadro de Maniobras",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "Control neumático para cuadros de maniobras de equipos perforadores. Alta confiabilidad en campo.",
+          "descripcion": "Control neumático para cuadros de maniobras de equipos perforadores. Alta confiabilidad y sello duradero en campo.",
           "productosIncluidos": [],
           "catalogoPdf": null
         }
@@ -110,20 +123,23 @@
       "nombre": "Materiales de Hule",
       "fabricante": null,
       "icono": "drum",
+      "descripcionCorta": "Apoyos elastoméricos, empaques y materiales de hule para obra civil, perforación y producción.",
       "productos": [
         {
-          "id": "hule-puentes",
-          "nombre": "Hule para Puentes y Obra Civil",
+          "id": "hule-perforacion",
+          "nombre": "Hule para Perforación y Producción",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "Apoyos elastoméricos para puentes. Cumple normativas internacionales de ingeniería estructural.",
+          "descripcion": "Materiales resistentes a hidrocarburos para aplicaciones en campo petrolero y acuífero. Alta durabilidad.",
           "productosIncluidos": [],
           "catalogoPdf": null
         },
         {
-          "id": "hule-perforacion",
-          "nombre": "Hule para Perforación y Producción",
+          "id": "hule-puentes",
+          "nombre": "Hule para Puentes y Obra Civil",
+          "productoPrincipal": false,
           "imagen": null,
-          "descripcion": "Materiales resistentes a hidrocarburos para aplicaciones en campo petrolero y acuífero.",
+          "descripcion": "Apoyos elastoméricos para puentes. Cumple normativas internacionales de ingeniería estructural.",
           "productosIncluidos": [],
           "catalogoPdf": null
         }
@@ -134,12 +150,14 @@
       "nombre": "Herramientas de Pesca",
       "fabricante": null,
       "icono": "star",
+      "descripcionCorta": "Herramientas especializadas para recuperación de objetos en pozos de petróleo y agua.",
       "productos": [
         {
           "id": "fishing-tools",
           "nombre": "Fishing Tools — Industria Petrolera y Acuífera",
+          "productoPrincipal": true,
           "imagen": null,
-          "descripcion": "Herramientas especializadas para la recuperación de objetos atrapados en pozos de petróleo y agua.",
+          "descripcion": "Herramientas especializadas para la recuperación de objetos atrapados en pozos de petróleo y agua. Servicio técnico especializado.",
           "productosIncluidos": [],
           "catalogoPdf": null
         }

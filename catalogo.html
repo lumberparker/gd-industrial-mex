@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos — G&D Industrial-Mex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="blocks/catalogo.css" />
+  </head>
+  <body>
+
+    <!-- HEADER (starts scrolled — no hero below) -->
+    <header class="header header--scrolled" id="header">
+      <a href="index.html" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22" cy="22" r="20" fill="none" stroke="#00b4a6" stroke-width="2"/>
+          <circle cx="22" cy="22" r="7" fill="#00b4a6"/>
+          <path d="M22 5 A17 17 0 0 1 39 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 39 A17 17 0 0 1 5 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="header__logo-text">
+          <span class="header__logo-brand">G&amp;D</span>
+          <span class="header__logo-sub">Industrial-Mex</span>
+        </div>
+      </a>
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header__nav" id="headerNav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="index.html" class="header__nav-link">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html#nosotros" class="header__nav-link">Sobre Nosotros</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html#industrias" class="header__nav-link">Servicios</a>
+          </li>
+          <li class="header__nav-item header__nav-item--active">
+            <a href="catalogo.html" class="header__nav-link">Catálogo</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="index.html#contacto" class="header__nav-link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="cat-page">
+
+      <!-- Page Hero -->
+      <section class="cat-hero">
+        <div class="cat-hero__inner">
+          <nav class="cat-hero__breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Inicio</a>
+            <span class="cat-hero__breadcrumb-sep">›</span>
+            <span>Catálogo</span>
+          </nav>
+          <p class="cat-hero__eyebrow">Mecanotecnica · Ruadigon</p>
+          <h1 class="cat-hero__title">CATÁLOGO DE<br>PRODUCTOS</h1>
+          <p class="cat-hero__subtitle">Explora nuestra línea completa de transmisión de potencia, embragues neumáticos, coples flexibles y refacciones industriales especializadas.</p>
+        </div>
+      </section>
+
+      <!-- Layout -->
+      <div class="cat-layout">
+
+        <!-- Mobile sidebar toggle -->
+        <button class="cat-sidebar-toggle" id="catSidebarToggle" aria-expanded="false" aria-controls="catSidebar">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="6" x2="17" y2="6"/>
+            <line x1="3" y1="10" x2="13" y2="10"/>
+            <line x1="3" y1="14" x2="10" y2="14"/>
+          </svg>
+          <span class="cat-toggle-label">Mostrar filtros</span>
+        </button>
+
+        <!-- Sidebar -->
+        <aside class="cat-sidebar" id="catSidebar" aria-label="Filtros de catálogo">
+
+          <!-- Search -->
+          <div class="cat-sidebar__section">
+            <div class="cat-search">
+              <svg class="cat-search__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="6"/>
+                <line x1="14" y1="14" x2="18" y2="18"/>
+              </svg>
+              <input class="cat-search__input"
+                     id="catSearch"
+                     type="search"
+                     placeholder="Buscar producto..."
+                     autocomplete="off"
+                     aria-label="Buscar en el catálogo" />
+            </div>
+          </div>
+
+          <div class="cat-sidebar__divider"></div>
+
+          <!-- Fabricante chips -->
+          <div class="cat-sidebar__section">
+            <p class="cat-sidebar__heading">Fabricante</p>
+            <div class="cat-fab-chips" id="catFabChips">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div class="cat-sidebar__divider"></div>
+
+          <!-- Category nav -->
+          <div class="cat-sidebar__section">
+            <p class="cat-sidebar__heading">Categoría</p>
+            <ul class="cat-nav-list" id="catNavList">
+              <!-- Rendered by JS -->
+            </ul>
+          </div>
+
+          <div class="cat-sidebar__divider"></div>
+
+          <!-- Clear filters -->
+          <div class="cat-sidebar__section">
+            <button class="cat-clear" id="catClear">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;flex-shrink:0">
+                <line x1="2" y1="2" x2="14" y2="14"/>
+                <line x1="14" y1="2" x2="2" y2="14"/>
+              </svg>
+              Limpiar filtros
+            </button>
+          </div>
+
+        </aside>
+
+        <!-- Content -->
+        <section class="cat-content">
+
+          <!-- Toolbar -->
+          <div class="cat-toolbar" id="catToolbar">
+            <p class="cat-toolbar__count">
+              Mostrando <strong>—</strong> productos
+            </p>
+            <span class="cat-toolbar__active-filter" style="display:none">
+              <span></span>
+              <button class="cat-toolbar__filter-x" id="catFilterX" title="Quitar filtro">×</button>
+            </span>
+          </div>
+
+          <!-- Cards grid -->
+          <div class="cat-grid" id="catGrid">
+            <!-- Rendered by JS -->
+          </div>
+
+        </section>
+
+      </div>
+      <!-- /cat-layout -->
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="22" cy="22" r="20" fill="none" stroke="#00b4a6" stroke-width="2"/>
+              <circle cx="22" cy="22" r="7" fill="#00b4a6"/>
+              <path d="M22 5 A17 17 0 0 1 39 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+              <path d="M22 39 A17 17 0 0 1 5 22" fill="none" stroke="#00b4a6" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="footer__logo-text">
+              <span class="footer__logo-brand">G&amp;D</span>
+              <span class="footer__logo-sub">Industrial-Mex</span>
+            </div>
+          </a>
+          <p class="footer__tagline">Transmisión de potencia industrial.<br>Calidad, servicio y garantía.</p>
+        </div>
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">Navegación</h4>
+          <ul class="footer__nav-list">
+            <li><a href="index.html" class="footer__nav-link">Home</a></li>
+            <li><a href="index.html#nosotros" class="footer__nav-link">Sobre Nosotros</a></li>
+            <li><a href="index.html#industrias" class="footer__nav-link">Industrias</a></li>
+            <li><a href="catalogo.html" class="footer__nav-link">Catálogo</a></li>
+            <li><a href="index.html#contacto" class="footer__nav-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__products">
+          <h4 class="footer__nav-title">Productos</h4>
+          <ul class="footer__nav-list">
+            <li><a href="catalogo.html#embragues-frenos" class="footer__nav-link">Embragues Neumáticos</a></li>
+            <li><a href="catalogo.html#coples-flexibles" class="footer__nav-link">Coples Flexibles</a></li>
+            <li><a href="catalogo.html#uniones-giratorias" class="footer__nav-link">Uniones Giratorias</a></li>
+            <li><a href="catalogo.html#valvulas" class="footer__nav-link">Válvulas Neumáticas</a></li>
+            <li><a href="catalogo.html#materiales-hule" class="footer__nav-link">Materiales de Hule</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4 class="footer__nav-title">Contacto</h4>
+          <p class="footer__contact-item">(+52) 33 3614-0123</p>
+          <p class="footer__contact-item">ventas@indusmex.com</p>
+          <p class="footer__contact-item">consultas@indusmex.com</p>
+          <p class="footer__contact-item">Av. Federalismo Sur 869-A<br>Col. Moderna, Guadalajara, Jal.</p>
+          <a href="https://wa.me/523339555895" class="footer__whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 G&amp;D Industrial-Mex S.A. de C.V. — Todos los derechos reservados</p>
+        <p class="footer__credit">Diseño por Berries &amp; Mango</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/523339555895" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.882l6.184-1.622A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 0 1-5.006-1.374l-.36-.213-3.713.973.99-3.63-.234-.374A9.782 9.782 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/>
+      </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/header.js"></script>
+    <script src="scripts/catalogo.js"></script>
+
+  </body>
+</html>
