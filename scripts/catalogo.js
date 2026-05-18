@@ -1,7 +1,8 @@
 /* ============================================================
-   catalogo.js — Full product catalog for catalogo.html
+   catalogo.js — Atlas Edition
    ============================================================ */
 
+/* ── Icon map ── */
 const ICONS = {
   gear: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
     <circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/>
@@ -38,30 +39,197 @@ const DOWNLOAD_SVG = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg
   <line x1="8" y1="2" x2="8" y2="10"/>
 </svg>`;
 
-/* ── State ── */
-let allCategorias = [];
-let activeCatId   = 'todos';
-let activeFab     = 'todos';
-let searchQuery   = '';
+/* ── Per-category visual themes ── */
+const CAT_THEMES = {
+  'embragues-frenos':    { bg: 'linear-gradient(145deg,#0c1a28 0%,#0f2433 100%)',  accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
+  'coples-flexibles':    { bg: 'linear-gradient(145deg,#081e1a 0%,#0c2820 100%)',  accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
+  'uniones-giratorias':  { bg: 'linear-gradient(145deg,#0c1830 0%,#102040 100%)',  accent: '#4db8ff', glow: 'rgba(77,184,255,0.18)',  iconBg: 'rgba(77,184,255,0.08)', iconBgH: 'rgba(77,184,255,0.16)' },
+  'valvulas':            { bg: 'linear-gradient(145deg,#1a1008 0%,#241408 100%)',  accent: '#e8611a', glow: 'rgba(232,97,26,0.22)',   iconBg: 'rgba(232,97,26,0.08)',  iconBgH: 'rgba(232,97,26,0.16)'  },
+  'materiales-hule':     { bg: 'linear-gradient(145deg,#0c180c 0%,#102014 100%)',  accent: '#5ab85a', glow: 'rgba(90,184,90,0.18)',   iconBg: 'rgba(90,184,90,0.08)',  iconBgH: 'rgba(90,184,90,0.16)'  },
+  'herramientas-pesca':  { bg: 'linear-gradient(145deg,#181408 0%,#20180c 100%)',  accent: '#e8c01a', glow: 'rgba(232,192,26,0.18)',  iconBg: 'rgba(232,192,26,0.08)', iconBgH: 'rgba(232,192,26,0.16)' },
+};
+const DEFAULT_THEME = { bg: 'linear-gradient(145deg,#0c1828 0%,#0f2030 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)', iconBg: 'rgba(0,191,175,0.08)', iconBgH: 'rgba(0,191,175,0.15)' };
 
-/* ── Build a single catalog card ── */
-function buildCatCard(producto, categoria) {
+/* ── State ── */
+let allData = null;
+
+/* ─────────────────────────────────────────────
+   ATLAS
+───────────────────────────────────────────── */
+
+function buildChapter(cat) {
+  const t = CAT_THEMES[cat.id] || DEFAULT_THEME;
+  const count = cat.productos.length;
+
+  return `
+    <div class="cat-chapter" data-cat="${cat.id}"
+         style="background:${t.bg};--cat-accent:${t.accent};--cat-glow:${t.glow};--cat-icon-bg:${t.iconBg};--cat-icon-bg-h:${t.iconBgH};">
+      <div class="cat-chapter__glow"></div>
+      <div class="cat-chapter__top">
+        ${cat.fabricante
+          ? `<span class="cat-chapter__fab">${cat.fabricante}</span>`
+          : `<span></span>`}
+        <span class="cat-chapter__count-badge">${count}</span>
+      </div>
+      <div class="cat-chapter__icon-wrap">
+        <div class="cat-chapter__icon">${ICONS[cat.icono] || ICONS.gear}</div>
+      </div>
+      <div class="cat-chapter__body">
+        <h3 class="cat-chapter__name">${cat.nombre}</h3>
+        <p class="cat-chapter__desc">${cat.descripcionCorta || ''}</p>
+        <div class="cat-chapter__meta">
+          <span class="cat-chapter__products">${count} ${count === 1 ? 'producto' : 'productos'}</span>
+          <span class="cat-chapter__cta">Explorar →</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+function initAtlas(gridEl) {
+  gridEl.querySelectorAll('.cat-chapter').forEach(ch => {
+    /* Mouse-tracking glow */
+    ch.addEventListener('mousemove', e => {
+      const r = ch.getBoundingClientRect();
+      ch.style.setProperty('--mx', ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%');
+      ch.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%');
+    });
+    ch.addEventListener('click', () => openCategory(ch.dataset.cat));
+  });
+}
+
+/* ─────────────────────────────────────────────
+   VIEW TRANSITIONS
+───────────────────────────────────────────── */
+
+function openCategory(catId) {
+  const atlasEl = document.getElementById('catAtlas');
+  const stageEl = document.getElementById('catStage');
+
+  /* Fade atlas out */
+  atlasEl.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
+  atlasEl.style.opacity = '0';
+  atlasEl.style.transform = 'scale(0.97)';
+
+  setTimeout(() => {
+    atlasEl.style.display = 'none';
+
+    populateStage(catId);
+
+    stageEl.style.display = 'block';
+    stageEl.style.opacity = '0';
+    stageEl.style.transform = 'translateY(18px)';
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      stageEl.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      stageEl.style.opacity = '1';
+      stageEl.style.transform = 'translateY(0)';
+    }));
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    history.pushState(null, '', `#${catId}`);
+  }, 280);
+}
+
+function closeStage() {
+  const atlasEl = document.getElementById('catAtlas');
+  const stageEl = document.getElementById('catStage');
+
+  stageEl.style.transition = 'opacity 0.26s ease, transform 0.26s ease';
+  stageEl.style.opacity = '0';
+  stageEl.style.transform = 'translateY(10px)';
+
+  setTimeout(() => {
+    stageEl.style.display = 'none';
+    atlasEl.style.display = 'block';
+    atlasEl.style.opacity = '0';
+    atlasEl.style.transform = 'scale(0.97)';
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      atlasEl.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      atlasEl.style.opacity = '1';
+      atlasEl.style.transform = 'scale(1)';
+    }));
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    history.pushState(null, '', location.pathname);
+  }, 260);
+}
+
+/* ─────────────────────────────────────────────
+   STAGE
+───────────────────────────────────────────── */
+
+function populateStage(catId) {
+  const data = allData;
+  const cat  = data.categorias.find(c => c.id === catId);
+  if (!cat) return;
+
+  const t = CAT_THEMES[catId] || DEFAULT_THEME;
+
+  /* ── Category tab strip ── */
+  const tabsEl = document.getElementById('catStageTabs');
+  tabsEl.innerHTML = data.categorias.map(c => {
+    const active = c.id === catId;
+    const ct = CAT_THEMES[c.id] || DEFAULT_THEME;
+    return `
+      <button class="cat-stage-tab${active ? ' cat-stage-tab--active' : ''}"
+              data-cat="${c.id}"
+              style="${active ? `color:${ct.accent}` : ''}">
+        <span class="cat-stage-tab__icon">${ICONS[c.icono] || ICONS.gear}</span>
+        ${c.nombre.split(' ').slice(0, 2).join(' ')}
+      </button>`;
+  }).join('');
+
+  /* Scroll active tab into view */
+  const activeTab = tabsEl.querySelector('.cat-stage-tab--active');
+  activeTab?.scrollIntoView({ inline: 'center', block: 'nearest' });
+
+  /* ── Mini category hero ── */
+  document.getElementById('catCatHero').innerHTML = `
+    <div class="cat-stage__cat-hero-inner">
+      <div class="cat-stage__cat-icon" style="color:${t.accent}">${ICONS[cat.icono] || ICONS.gear}</div>
+      <div>
+        <span class="cat-stage__cat-label" style="color:${t.accent}">${cat.fabricante || 'Línea especializada'}</span>
+        <h2 class="cat-stage__cat-name">${cat.nombre}</h2>
+        <p class="cat-stage__cat-desc">${cat.descripcionCorta || ''}</p>
+        <span class="cat-stage__cat-count"
+              style="background:${t.iconBg};color:${t.accent};border-color:${t.iconBgH}">
+          ${cat.productos.length} ${cat.productos.length === 1 ? 'producto' : 'productos'}
+        </span>
+      </div>
+    </div>`;
+
+  /* ── Product cards ── */
+  const gridEl = document.getElementById('catStageGrid');
+  gridEl.innerHTML = cat.productos.map(p => buildProductCard(p, cat)).join('');
+
+  /* Stagger entrance animation */
+  gridEl.querySelectorAll('.cat-card').forEach((card, i) => {
+    setTimeout(() => {
+      card.style.transition = 'opacity 0.36s ease, transform 0.36s ease';
+      card.style.opacity    = '1';
+      card.style.transform  = 'translateY(0)';
+    }, 60 + i * 80);
+  });
+}
+
+/* ─────────────────────────────────────────────
+   PRODUCT CARD
+───────────────────────────────────────────── */
+
+function buildProductCard(producto, categoria) {
   const hasPdf    = !!producto.catalogoPdf;
-  const hasSeries = producto.productosIncluidos && producto.productosIncluidos.length > 0;
+  const hasSeries = producto.productosIncluidos?.length > 0;
 
   const imgStyle = producto.imagen
-    ? `background-image: url('${producto.imagen}'); background-color: transparent;`
-    : '';
-
-  const imgContent = producto.imagen
-    ? `<img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy" />`
+    ? `background-image:url('${producto.imagen}');background-color:transparent;`
     : '';
 
   const fabBadge = categoria.fabricante
     ? `<span class="cat-card__fab-badge">${categoria.fabricante}</span>`
     : '';
 
-  const badge = hasPdf
+  const cornerBadge = hasPdf
     ? `<span class="cat-card__pdf-badge">${DOWNLOAD_SVG} PDF</span>`
     : `<span class="cat-card__soon-badge">Próximamente</span>`;
 
@@ -75,269 +243,180 @@ function buildCatCard(producto, categoria) {
     : '';
 
   const action = hasPdf
-    ? `<a class="cat-card__download" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">
-        ${DOWNLOAD_SVG} Catálogo PDF
-       </a>`
+    ? `<a class="cat-card__download" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">${DOWNLOAD_SVG} Catálogo PDF</a>`
     : `<a class="cat-card__contact" href="index.html#contacto">Consultar disponibilidad →</a>`;
 
   return `
-    <article class="cat-card cat-card--fade-in"
-             data-id="${producto.id}"
-             data-cat="${categoria.id}"
-             data-fab="${categoria.fabricante || ''}"
-             data-nombre="${producto.nombre.toLowerCase()}"
-             data-desc="${producto.descripcion.toLowerCase()}">
+    <article class="cat-card" data-id="${producto.id}">
       <div class="cat-card__img" style="${imgStyle}">
-        ${imgContent}
-        <div class="cat-card__badges">
-          <span class="cat-card__cat-badge">${categoria.nombre}</span>
-          ${fabBadge}
-        </div>
-        ${badge}
+        ${fabBadge}
+        ${cornerBadge}
       </div>
       <div class="cat-card__body">
         <h3 class="cat-card__nombre">${producto.nombre}</h3>
         <p class="cat-card__desc">${producto.descripcion}</p>
         ${series}
-        <div class="cat-card__footer">
-          ${action}
-        </div>
+        <div class="cat-card__footer">${action}</div>
       </div>
     </article>`;
 }
 
-/* ── Render all cards ── */
-function renderCards(categorias, gridEl) {
-  let html = '';
-  categorias.forEach(cat => {
-    cat.productos.forEach(p => {
-      html += buildCatCard(p, cat);
-    });
-  });
-  html += `<div class="cat-empty" id="catEmpty">
-    <div class="cat-empty__icon">
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="24" cy="24" r="18"/><line x1="16" y1="16" x2="32" y2="32"/><line x1="32" y1="16" x2="16" y2="32"/>
-      </svg>
-    </div>
-    <p class="cat-empty__title">Sin resultados</p>
-    <p class="cat-empty__body">Intenta con otro término o limpia los filtros activos.</p>
-  </div>`;
-  gridEl.innerHTML = html;
-}
+/* ─────────────────────────────────────────────
+   COMMAND PALETTE SEARCH
+───────────────────────────────────────────── */
 
-/* ── Apply active filters ── */
-function applyFilters(gridEl, toolbarEl) {
-  const cards = gridEl.querySelectorAll('.cat-card');
-  let visible = 0;
+let paletteIndex = -1;
 
-  cards.forEach(card => {
-    const matchCat = activeCatId === 'todos' || card.dataset.cat === activeCatId;
-    const matchFab = activeFab === 'todos'   || card.dataset.fab.toLowerCase() === activeFab.toLowerCase();
-    const matchSearch = !searchQuery ||
-      card.dataset.nombre.includes(searchQuery) ||
-      card.dataset.desc.includes(searchQuery);
-
-    const show = matchCat && matchFab && matchSearch;
-    card.classList.toggle('cat-card--hidden', !show);
-    if (show) visible++;
-  });
-
-  /* Update toolbar count */
-  const countEl = toolbarEl.querySelector('.cat-toolbar__count');
-  if (countEl) {
-    countEl.innerHTML = `Mostrando <strong>${visible}</strong> producto${visible !== 1 ? 's' : ''}`;
-  }
-
-  /* Empty state */
-  const emptyEl = document.getElementById('catEmpty');
-  if (emptyEl) emptyEl.classList.toggle('cat-empty--visible', visible === 0);
-}
-
-/* ── Build sidebar nav ── */
-function buildSidebar(data, sidebarEl, gridEl, toolbarEl) {
-  /* Search */
-  const searchEl = sidebarEl.querySelector('#catSearch');
-  if (searchEl) {
-    searchEl.addEventListener('input', e => {
-      searchQuery = e.target.value.trim().toLowerCase();
-      applyFilters(gridEl, toolbarEl);
-      updateClearBtn();
-    });
-  }
-
-  /* Fabricante chips */
-  const fabChipsEl = sidebarEl.querySelector('#catFabChips');
-  if (fabChipsEl) {
-    const chips = [
-      { id: 'todos', label: 'Todos' },
-      ...data.fabricantes.map(f => ({ id: f, label: f }))
-    ];
-
-    fabChipsEl.innerHTML = chips.map(c => `
-      <button class="cat-fab-chip${c.id === 'todos' ? ' cat-fab-chip--active' : ''}"
-              data-fab="${c.id}">
-        ${c.id !== 'todos' ? '<span class="cat-fab-dot"></span>' : ''}
-        ${c.label}
-      </button>`).join('');
-
-    fabChipsEl.addEventListener('click', e => {
-      const btn = e.target.closest('.cat-fab-chip');
-      if (!btn) return;
-      activeFab = btn.dataset.fab;
-      fabChipsEl.querySelectorAll('.cat-fab-chip').forEach(b =>
-        b.classList.toggle('cat-fab-chip--active', b === btn)
-      );
-      applyFilters(gridEl, toolbarEl);
-      updateClearBtn();
-    });
-  }
-
-  /* Category nav */
-  const navListEl = sidebarEl.querySelector('#catNavList');
-  if (navListEl) {
-    const cats = [
-      { id: 'todos', nombre: 'Todas las categorías', count: data.categorias.reduce((s, c) => s + c.productos.length, 0) },
-      ...data.categorias.map(c => ({ id: c.id, nombre: c.nombre, count: c.productos.length }))
-    ];
-
-    navListEl.innerHTML = cats.map(c => `
-      <li>
-        <button class="cat-nav-btn${c.id === 'todos' ? ' cat-nav-btn--active' : ''}"
-                data-cat="${c.id}">
-          <span class="cat-nav-btn__label">${c.nombre}</span>
-          <span class="cat-nav-btn__count">${c.count}</span>
-        </button>
-      </li>`).join('');
-
-    navListEl.addEventListener('click', e => {
-      const btn = e.target.closest('.cat-nav-btn');
-      if (!btn) return;
-      activeCatId = btn.dataset.cat;
-      navListEl.querySelectorAll('.cat-nav-btn').forEach(b =>
-        b.classList.toggle('cat-nav-btn--active', b === btn)
-      );
-
-      /* Update toolbar active filter badge */
-      updateToolbarFilter(btn.querySelector('.cat-nav-btn__label').textContent, toolbarEl);
-      applyFilters(gridEl, toolbarEl);
-      updateClearBtn();
-
-      /* Scroll to top of content on mobile */
-      if (window.innerWidth <= 768) {
-        gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  }
-
-  /* Clear button */
-  const clearBtn = sidebarEl.querySelector('#catClear');
-  if (clearBtn) {
-    clearBtn.addEventListener('click', () => {
-      clearAllFilters(sidebarEl, gridEl, toolbarEl);
-    });
-  }
-}
-
-function updateClearBtn() {
-  const clearBtn = document.getElementById('catClear');
-  if (!clearBtn) return;
-  const hasFilters = activeCatId !== 'todos' || activeFab !== 'todos' || searchQuery !== '';
-  clearBtn.classList.toggle('cat-clear--visible', hasFilters);
-}
-
-function clearAllFilters(sidebarEl, gridEl, toolbarEl) {
-  activeCatId = 'todos';
-  activeFab   = 'todos';
-  searchQuery = '';
-
-  const searchEl = document.getElementById('catSearch');
-  if (searchEl) searchEl.value = '';
-
-  sidebarEl.querySelectorAll('.cat-fab-chip').forEach((b, i) =>
-    b.classList.toggle('cat-fab-chip--active', i === 0)
+function flatProducts(data) {
+  return data.categorias.flatMap(cat =>
+    cat.productos.map(p => ({ producto: p, categoria: cat }))
   );
-
-  sidebarEl.querySelectorAll('.cat-nav-btn').forEach((b, i) =>
-    b.classList.toggle('cat-nav-btn--active', i === 0)
-  );
-
-  updateToolbarFilter(null, toolbarEl);
-  applyFilters(gridEl, toolbarEl);
-  updateClearBtn();
 }
 
-function updateToolbarFilter(label, toolbarEl) {
-  const filterTagEl = toolbarEl.querySelector('.cat-toolbar__active-filter');
-  if (!filterTagEl) return;
+function openSearch() {
+  document.getElementById('catSearchOverlay').classList.add('cat-search-overlay--open');
+  setTimeout(() => document.getElementById('catPaletteInput').focus(), 40);
+  paletteIndex = -1;
+  renderPaletteResults('');
+}
 
-  if (!label || label === 'Todas las categorías') {
-    filterTagEl.style.display = 'none';
-  } else {
-    filterTagEl.style.display = 'inline-flex';
-    filterTagEl.querySelector('span:first-child').textContent = label;
+function closeSearch() {
+  document.getElementById('catSearchOverlay').classList.remove('cat-search-overlay--open');
+  document.getElementById('catPaletteInput').value = '';
+}
+
+function renderPaletteResults(query) {
+  const q = query.toLowerCase().trim();
+  const all = flatProducts(allData);
+
+  const matches = q
+    ? all.filter(({ produto: _p, producto, categoria }) =>
+        producto.nombre.toLowerCase().includes(q) ||
+        producto.descripcion.toLowerCase().includes(q) ||
+        categoria.nombre.toLowerCase().includes(q) ||
+        (producto.productosIncluidos || []).some(s => s.toLowerCase().includes(q))
+      )
+    : all;
+
+  document.getElementById('catPaletteHint').textContent =
+    q ? `${matches.length} resultado${matches.length !== 1 ? 's' : ''}` : 'Todos los productos';
+
+  const resultsEl = document.getElementById('catPaletteResults');
+
+  if (!matches.length) {
+    resultsEl.innerHTML = `<p class="cat-palette__empty">Sin resultados para "<em>${query}</em>"</p>`;
+    return;
   }
-}
 
-/* ── Mobile sidebar toggle ── */
-function initMobileToggle(toggleBtn, sidebarEl) {
-  if (!toggleBtn || !sidebarEl) return;
-  toggleBtn.addEventListener('click', () => {
-    sidebarEl.classList.toggle('cat-sidebar--open');
-    const isOpen = sidebarEl.classList.contains('cat-sidebar--open');
-    toggleBtn.setAttribute('aria-expanded', isOpen);
-    toggleBtn.querySelector('.cat-toggle-label').textContent =
-      isOpen ? 'Ocultar filtros' : 'Mostrar filtros';
+  resultsEl.innerHTML = matches.map(({ producto, categoria }) => `
+    <div class="cat-palette__result" data-cat="${categoria.id}" data-id="${producto.id}">
+      <div class="cat-palette__result-icon">${ICONS[categoria.icono] || ICONS.gear}</div>
+      <div>
+        <p class="cat-palette__result-cat">${categoria.nombre}</p>
+        <p class="cat-palette__result-name">${producto.nombre}</p>
+      </div>
+      <span class="cat-palette__result-arrow">→</span>
+    </div>`).join('');
+
+  resultsEl.querySelectorAll('.cat-palette__result').forEach(r => {
+    r.addEventListener('click', () => {
+      closeSearch();
+      openCategory(r.dataset.cat);
+    });
   });
 }
 
-/* ── URL hash category pre-select ── */
-function applyHashFilter(sidebarEl, gridEl, toolbarEl) {
-  const hash = window.location.hash.replace('#', '');
-  if (!hash) return;
-  const btn = sidebarEl.querySelector(`[data-cat="${hash}"]`);
-  if (!btn) return;
-  btn.click();
+function movePaletteFocus(dir) {
+  const items = document.querySelectorAll('.cat-palette__result');
+  if (!items.length) return;
+  items[paletteIndex]?.classList.remove('cat-palette__result--focused');
+  paletteIndex = Math.max(0, Math.min(items.length - 1, paletteIndex + dir));
+  items[paletteIndex].classList.add('cat-palette__result--focused');
+  items[paletteIndex].scrollIntoView({ block: 'nearest' });
 }
 
-/* ── Toolbar X button ── */
-function initToolbarX(sidebarEl, gridEl, toolbarEl) {
-  const xBtn = document.getElementById('catFilterX');
-  if (!xBtn) return;
-  xBtn.addEventListener('click', () => {
-    activeCatId = 'todos';
-    if (sidebarEl) {
-      sidebarEl.querySelectorAll('.cat-nav-btn').forEach((b, i) =>
-        b.classList.toggle('cat-nav-btn--active', i === 0)
-      );
+function initSearch() {
+  const overlay  = document.getElementById('catSearchOverlay');
+  const input    = document.getElementById('catPaletteInput');
+  const trigger  = document.getElementById('catSearchTrigger');
+  const escBtn   = document.getElementById('catPaletteEsc');
+
+  trigger?.addEventListener('click', openSearch);
+  escBtn?.addEventListener('click', closeSearch);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+
+  input.addEventListener('input', () => {
+    paletteIndex = -1;
+    renderPaletteResults(input.value);
+  });
+
+  /* Keyboard shortcuts */
+  document.addEventListener('keydown', e => {
+    const isOpen = overlay.classList.contains('cat-search-overlay--open');
+
+    /* / to open (when not typing in an input) */
+    if (e.key === '/' && !isOpen) {
+      const tag = document.activeElement?.tagName;
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); openSearch(); }
     }
-    updateToolbarFilter(null, toolbarEl);
-    applyFilters(gridEl, toolbarEl);
-    updateClearBtn();
+
+    if (!isOpen) return;
+
+    if (e.key === 'Escape') { closeSearch(); return; }
+    if (e.key === 'ArrowDown')  { e.preventDefault(); movePaletteFocus(+1); }
+    if (e.key === 'ArrowUp')    { e.preventDefault(); movePaletteFocus(-1); }
+    if (e.key === 'Enter') {
+      const focused = document.querySelector('.cat-palette__result--focused');
+      if (focused) { closeSearch(); openCategory(focused.dataset.cat); }
+    }
   });
 }
 
-/* ── Bootstrap ── */
+/* ── Tab strip delegation (on document so it survives innerHTML swaps) ── */
+function initTabs() {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.cat-stage-tab');
+    if (btn && btn.dataset.cat) populateStage(btn.dataset.cat);
+  });
+}
+
+/* ── Browser back/forward ── */
+window.addEventListener('popstate', () => {
+  const hash = location.hash.replace('#', '');
+  if (hash && allData?.categorias.find(c => c.id === hash)) {
+    openCategory(hash);
+  } else {
+    closeStage();
+  }
+});
+
+/* ─────────────────────────────────────────────
+   BOOTSTRAP
+───────────────────────────────────────────── */
+
 fetch('assets/jsons/productos.json')
-  .then(res => {
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json();
-  })
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
   .then(data => {
-    allCategorias = data.categorias;
+    allData = data;
 
-    const gridEl    = document.getElementById('catGrid');
-    const sidebarEl = document.getElementById('catSidebar');
-    const toolbarEl = document.getElementById('catToolbar');
-    const toggleBtn = document.getElementById('catSidebarToggle');
+    /* Render atlas */
+    const atlasGrid = document.getElementById('catAtlasGrid');
+    if (atlasGrid) {
+      atlasGrid.innerHTML = data.categorias.map(buildChapter).join('');
+      initAtlas(atlasGrid);
+    }
 
-    if (!gridEl) return;
+    /* Back button */
+    document.getElementById('catBack')?.addEventListener('click', closeStage);
 
-    renderCards(data.categorias, gridEl);
-    if (sidebarEl && toolbarEl) buildSidebar(data, sidebarEl, gridEl, toolbarEl);
-    applyFilters(gridEl, toolbarEl);
-    initMobileToggle(toggleBtn, sidebarEl);
-    initToolbarX(sidebarEl, gridEl, toolbarEl);
-    applyHashFilter(sidebarEl, gridEl, toolbarEl);
+    /* Tabs + search */
+    initTabs();
+    initSearch();
+
+    /* Deep-link via URL hash */
+    const hash = location.hash.replace('#', '');
+    if (hash && data.categorias.find(c => c.id === hash)) {
+      setTimeout(() => openCategory(hash), 120);
+    }
   })
-  .catch(err => console.error('catalogo.json no se pudo cargar:', err));
+  .catch(err => console.error('productos.json load error:', err));

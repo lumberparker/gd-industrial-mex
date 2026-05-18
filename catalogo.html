@@ -67,96 +67,84 @@
         </div>
       </section>
 
-      <!-- Layout -->
-      <div class="cat-layout">
+      <!-- ═══════════════════════════════════════
+           ATLAS — chapter grid (rendered by JS)
+           ═══════════════════════════════════════ -->
+      <div class="cat-atlas" id="catAtlas">
+        <div class="cat-atlas__grid" id="catAtlasGrid">
+          <!-- .cat-chapter panels rendered by catalogo.js -->
+        </div>
+      </div>
 
-        <!-- Mobile sidebar toggle -->
-        <button class="cat-sidebar-toggle" id="catSidebarToggle" aria-expanded="false" aria-controls="catSidebar">
-          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-            <line x1="3" y1="6" x2="17" y2="6"/>
-            <line x1="3" y1="10" x2="13" y2="10"/>
-            <line x1="3" y1="14" x2="10" y2="14"/>
-          </svg>
-          <span class="cat-toggle-label">Mostrar filtros</span>
-        </button>
+      <!-- ═══════════════════════════════════════
+           STAGE — product view (hidden by default)
+           ═══════════════════════════════════════ -->
+      <div class="cat-stage" id="catStage" style="display:none">
 
-        <!-- Sidebar -->
-        <aside class="cat-sidebar" id="catSidebar" aria-label="Filtros de catálogo">
-
-          <!-- Search -->
-          <div class="cat-sidebar__section">
-            <div class="cat-search">
-              <svg class="cat-search__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9" cy="9" r="6"/>
-                <line x1="14" y1="14" x2="18" y2="18"/>
-              </svg>
-              <input class="cat-search__input"
-                     id="catSearch"
-                     type="search"
-                     placeholder="Buscar producto..."
-                     autocomplete="off"
-                     aria-label="Buscar en el catálogo" />
-            </div>
-          </div>
-
-          <div class="cat-sidebar__divider"></div>
-
-          <!-- Fabricante chips -->
-          <div class="cat-sidebar__section">
-            <p class="cat-sidebar__heading">Fabricante</p>
-            <div class="cat-fab-chips" id="catFabChips">
-              <!-- Rendered by JS -->
-            </div>
-          </div>
-
-          <div class="cat-sidebar__divider"></div>
-
-          <!-- Category nav -->
-          <div class="cat-sidebar__section">
-            <p class="cat-sidebar__heading">Categoría</p>
-            <ul class="cat-nav-list" id="catNavList">
-              <!-- Rendered by JS -->
-            </ul>
-          </div>
-
-          <div class="cat-sidebar__divider"></div>
-
-          <!-- Clear filters -->
-          <div class="cat-sidebar__section">
-            <button class="cat-clear" id="catClear">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;flex-shrink:0">
-                <line x1="2" y1="2" x2="14" y2="14"/>
-                <line x1="14" y1="2" x2="2" y2="14"/>
-              </svg>
-              Limpiar filtros
+        <!-- Sticky header: back + category tabs -->
+        <div class="cat-stage__header">
+          <div class="cat-stage__header-inner">
+            <button class="cat-stage__back" id="catBack">
+              ← Categorías
             </button>
+            <div class="cat-stage__tabs" id="catStageTabs">
+              <!-- tab buttons rendered by JS -->
+            </div>
           </div>
+        </div>
 
-        </aside>
-
-        <!-- Content -->
-        <section class="cat-content">
-
-          <!-- Toolbar -->
-          <div class="cat-toolbar" id="catToolbar">
-            <p class="cat-toolbar__count">
-              Mostrando <strong>—</strong> productos
-            </p>
-            <span class="cat-toolbar__active-filter" style="display:none">
-              <span></span>
-              <button class="cat-toolbar__filter-x" id="catFilterX" title="Quitar filtro">×</button>
-            </span>
+        <!-- Content: mini-hero + product grid -->
+        <div class="cat-stage__content">
+          <div class="cat-stage__cat-hero" id="catCatHero">
+            <!-- rendered by JS -->
           </div>
-
-          <!-- Cards grid -->
-          <div class="cat-grid" id="catGrid">
-            <!-- Rendered by JS -->
+          <div class="cat-stage__grid-wrap">
+            <div class="cat-stage__grid" id="catStageGrid">
+              <!-- product cards rendered by JS -->
+            </div>
           </div>
-
-        </section>
+        </div>
 
       </div>
-      <!-- /cat-layout -->
+
+      <!-- ═══════════════════════════════════════
+           COMMAND PALETTE SEARCH
+           ═══════════════════════════════════════ -->
+      <div class="cat-search-overlay" id="catSearchOverlay"
+           role="dialog" aria-modal="true" aria-label="Buscar productos">
+        <div class="cat-search-palette">
+          <div class="cat-palette__input-row">
+            <svg class="cat-palette__search-icon" viewBox="0 0 20 20" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="6"/>
+              <line x1="14" y1="14" x2="18" y2="18"/>
+            </svg>
+            <input class="cat-palette__input" id="catPaletteInput"
+                   type="search" placeholder="Buscar producto, serie o categoría…"
+                   autocomplete="off" spellcheck="false" />
+            <button class="cat-palette__esc" id="catPaletteEsc">ESC</button>
+          </div>
+          <p class="cat-palette__hint" id="catPaletteHint">Todos los productos</p>
+          <div class="cat-palette__results" id="catPaletteResults">
+            <!-- results rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           FLOATING SEARCH TRIGGER
+           ═══════════════════════════════════════ -->
+      <button class="cat-search-trigger" id="catSearchTrigger"
+              aria-label="Buscar en el catálogo (presiona /)">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="9" cy="9" r="6"/>
+          <line x1="14" y1="14" x2="18" y2="18"/>
+        </svg>
+        Buscar en el catálogo
+        <kbd>/</kbd>
+      </button>
 
     </main>
 
