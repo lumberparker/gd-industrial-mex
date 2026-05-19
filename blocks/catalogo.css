@@ -90,7 +90,7 @@
 
 .cat-atlas__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3px;
   background: #060e16; /* gap colour */
 }
@@ -309,12 +309,34 @@
 }
 
 /* Scrollable category tab strip */
+.cat-stage__tabs-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.cat-stage__tabs-wrap::before,
+.cat-stage__tabs-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  z-index: 1;
+}
+.cat-stage__tabs-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-navy), transparent);
+}
+.cat-stage__tabs-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-navy), transparent);
+}
 .cat-stage__tabs {
   display: flex;
   gap: 2px;
   overflow-x: auto;
   scrollbar-width: none;
-  flex: 1;
   align-items: center;
 }
 .cat-stage__tabs::-webkit-scrollbar { display: none; }
@@ -723,6 +745,10 @@
 }
 
 /* ── Responsive ── */
+@media (max-width: 1280px) {
+  .cat-atlas__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 1024px) {
   .cat-atlas__grid { grid-template-columns: repeat(2, 1fr); }
   .cat-stage__grid { grid-template-columns: repeat(2, 1fr); }

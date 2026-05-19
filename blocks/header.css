@@ -50,7 +50,7 @@
 .header__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   padding: 28px var(--pad-x);
   flex-shrink: 0;
 }
@@ -59,6 +59,29 @@
   width: 44px;
   height: 44px;
   flex-shrink: 0;
+}
+
+.header__logo-img {
+  height: 62px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  opacity: 0;
+}
+
+.header__logo-img--settle {
+  animation: logo-settle 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes logo-settle {
+  from {
+    transform: rotate(-30deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .header__logo-text {
@@ -76,9 +99,13 @@
 
 .header__logo-sub {
   font-size: 10px;
-  color: var(--color-teal);
-  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 3px;
   text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 400;
+  padding-left: 15px;
+  border-left: 1px solid rgba(0, 180, 166, 0.5);
 }
 
 /* ── Nav — white floating panel, top-right only ── */
@@ -162,6 +189,15 @@
 
   .header__logo {
     padding: 14px 0;
+    gap: 10px;
+  }
+
+  .header__logo-img {
+    height: 42px;
+  }
+
+  .header__logo-sub {
+    display: none;
   }
 
   .header__hamburger {

@@ -62,23 +62,23 @@
 }
 
 .presentaciones__img--oil {
-  background: linear-gradient(145deg, #0f2030 0%, #1a3a52 60%, #1a3040 100%);
-  /* background-image: url('../assets/images/industry-oil.jpg'); */
+  background-image: url('../assets/images/industry-oil.jpg');
+  background-color: #0f2030;
 }
 
 .presentaciones__img--construction {
-  background: linear-gradient(145deg, #1a1208 0%, #4a2e10 60%, #3a2010 100%);
-  /* background-image: url('../assets/images/industry-construction.jpg'); */
+  background-image: url('../assets/images/industry-construction.jpg');
+  background-color: #1a1208;
 }
 
 .presentaciones__img--energy {
-  background: linear-gradient(145deg, #081a10 0%, #0f3d22 60%, #0a2a18 100%);
-  /* background-image: url('../assets/images/industry-energy.jpg'); */
+  background-image: url('../assets/images/industry-energy.jpg');
+  background-color: #081a10;
 }
 
 .presentaciones__img--mining {
-  background: linear-gradient(145deg, #181408 0%, #3d3010 60%, #2a2008 100%);
-  /* background-image: url('../assets/images/industry-mining.jpg'); */
+  background-image: url('../assets/images/industry-mining.jpg');
+  background-color: #181408;
 }
 
 /* Teal accent line at bottom of image */

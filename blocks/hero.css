@@ -11,33 +11,28 @@
   align-items: center;
 }
 
-/* ── Right side: photo + CSS placeholder ──
-   Layers are stacked: real photo sits on top of the gradients.
-   When hero-bg.jpg loads it covers everything automatically.
-   When it is missing (404), the CSS placeholder below shows instead.
-   To activate: just drop assets/images/hero-bg.jpg — no code changes needed. */
-.hero__bg {
+/* ── Slideshow: crossfade carousel of hero images ── */
+.hero__slides {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
+  background-color: #0c1e2e;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+  will-change: opacity, transform;
   animation: hero-zoom 20s ease-in-out infinite alternate;
+}
 
-  background-image:
-    /* 1 — real photo (covers all layers below once the file exists) */
-    url('../assets/images/hero-bg.jpg'),
-    /* 2 — warm amber glow: the lit plant at dusk */
-    radial-gradient(ellipse 65% 60% at 80% 72%, rgba(210, 125, 28, 0.85) 0%, rgba(160, 80, 18, 0.55) 35%, transparent 70%),
-    /* 3 — secondary warm glow on upper towers */
-    radial-gradient(ellipse 35% 45% at 92% 38%, rgba(230, 150, 45, 0.5) 0%, transparent 58%),
-    /* 4 — cool blue-gray sky (top-right) */
-    radial-gradient(ellipse 55% 55% at 78% 12%, rgba(90, 140, 175, 0.45) 0%, transparent 65%),
-    /* 5 — base sky-to-ground gradient */
-    linear-gradient(175deg, #1a2e3e 0%, #243a4a 30%, #2e4a40 60%, #3a5030 100%);
-
-  background-size: cover, cover, cover, cover, cover;
-  background-position: right center, center, center, center, center;
-  background-repeat: no-repeat;
-  background-color: #1a2e3e;
+.hero__slide--active {
+  opacity: 1;
 }
 
 @keyframes hero-zoom {
@@ -48,6 +43,9 @@
 @media (max-width: 1024px) {
   .hero__overlay {
     clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
+  }
+  .hero__content {
+    max-width: min(540px, 54vw);
   }
 }
 
@@ -141,7 +139,7 @@
   position: relative;
   z-index: 2;
   padding: 0 var(--pad-x);
-  max-width: 680px;
+  max-width: min(680px, 50vw);
   padding-top: 80px; /* clear the header */
 }
 

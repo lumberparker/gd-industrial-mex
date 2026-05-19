@@ -1,165 +1,398 @@
 {
-  "fabricantes": ["Mecanotecnica", "Ruadigon"],
   "categorias": [
-    {
-      "id": "embragues-frenos",
-      "nombre": "Embragues y Frenos Neumáticos",
-      "fabricante": "Ruadigon",
-      "icono": "gear",
-      "descripcionCorta": "Embragues y frenos de disco neumáticos para equipos de perforación, prensas y maquinaria pesada.",
-      "productos": [
-        {
-          "id": "serie-cb",
-          "nombre": "Embrague Neumático Serie CB",
-          "productoPrincipal": true,
-          "imagen": null,
-          "descripcion": "Embrague neumático de alta capacidad para equipos de perforación y prensas industriales. Diseño robusto para ciclos continuos.",
-          "productosIncluidos": ["CB-10", "CB-20", "CB-30", "CB-40", "CB-50"],
-          "catalogoPdf": null
-        },
-        {
-          "id": "serie-vc",
-          "nombre": "Embrague Neumático Serie VC",
-          "productoPrincipal": false,
-          "imagen": null,
-          "descripcion": "Serie de alta velocidad para aplicaciones de corte y estampado industrial. Respuesta rápida y alta frecuencia de ciclado.",
-          "productosIncluidos": ["VC-20", "VC-30", "VC-40"],
-          "catalogoPdf": null
-        },
-        {
-          "id": "serie-eb",
-          "nombre": "Freno Neumático Serie EB",
-          "productoPrincipal": false,
-          "imagen": null,
-          "descripcion": "Freno de disco neumático para control de velocidad en maquinaria pesada. Alta disipación de calor.",
-          "productosIncluidos": ["EB-10", "EB-20", "EB-30"],
-          "catalogoPdf": null
-        },
-        {
-          "id": "serie-er",
-          "nombre": "Freno Neumático Serie ER",
-          "productoPrincipal": false,
-          "imagen": null,
-          "descripcion": "Freno de tambor para aplicaciones de perforación y equipos de izaje de alta exigencia.",
-          "productosIncluidos": ["ER-20", "ER-30", "ER-40", "ER-50"],
-          "catalogoPdf": null
-        }
-      ]
-    },
     {
       "id": "coples-flexibles",
       "nombre": "Coples Flexibles",
-      "fabricante": "Mecanotecnica",
-      "icono": "coupling",
-      "descripcionCorta": "Coples elásticos y dentados para transmisión de par con compensación de desalineaciones.",
+      "descripcion": "Acoples para transmisión de potencia con absorción de vibración y corrección de desalineación angular y radial.",
+      "proveedor": "GUMMI Group",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='14' cy='24' r='8' stroke='currentColor' stroke-width='2.5'/><circle cx='34' cy='24' r='8' stroke='currentColor' stroke-width='2.5'/><line x1='22' y1='24' x2='26' y2='24' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/></svg>",
       "productos": [
         {
-          "id": "cople-tipo-x",
-          "nombre": "Cople Universal Tipo X",
-          "productoPrincipal": true,
-          "imagen": null,
-          "descripcion": "El más versátil de la línea. Absorbe desalineaciones radiales, angulares y axiales sin necesidad de mantenimiento. Elemento elástico en poliuretano.",
-          "productosIncluidos": ["X-070", "X-090", "X-110", "X-140", "X-180", "X-225", "X-285"],
-          "catalogoPdf": null
+          "id": "acople-elastico-x",
+          "nombre": "Acople Elástico Tipo X",
+          "descripcion": "Acople flexible de elastómero tipo X para transmisión de par con amortiguación de vibraciones torsionales. Alta tolerancia a desalineaciones.",
+          "imagen": "assets/images/catalogo/cople-flexible__tipo-a.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
         },
         {
-          "id": "acoples-dentados",
-          "nombre": "Acoples Dentados de Acero",
-          "productoPrincipal": false,
+          "id": "acople-reforzado",
+          "nombre": "Acople Reforzado",
+          "descripcion": "Acople de alta resistencia para aplicaciones de maquinaria pesada. Diseñado para transmitir mayor par con vida útil extendida.",
           "imagen": null,
-          "descripcion": "Transmisión de par de alta capacidad mediante perfil dentado de acero tratado térmicamente. Para cargas de choque y reversibles.",
-          "productosIncluidos": ["AD-1", "AD-2", "AD-3", "AD-4", "AD-5"],
-          "catalogoPdf": null
+          "catalogoPdf": null,
+          "productoPrincipal": false
         }
       ]
     },
     {
-      "id": "uniones-giratorias",
-      "nombre": "Uniones Giratorias Neumáticas",
-      "fabricante": null,
-      "icono": "union",
-      "descripcionCorta": "Uniones giratorias para equipos rotatorios de perforación petrolera y acuífera.",
+      "id": "embragues-neumaticos",
+      "nombre": "Embragues Neumáticos",
+      "descripcion": "Embragues y frenos neumáticos de alta capacidad para prensas, equipos de perforación y maquinaria pesada.",
+      "proveedor": "GUMMI Group",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='24' cy='24' r='14' stroke='currentColor' stroke-width='2.5'/><circle cx='24' cy='24' r='6' stroke='currentColor' stroke-width='2.5'/><line x1='24' y1='4' x2='24' y2='10' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><line x1='24' y1='38' x2='24' y2='44' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><line x1='4' y1='24' x2='10' y2='24' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><line x1='38' y1='24' x2='44' y2='24' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/></svg>",
       "productos": [
         {
-          "id": "union-petroleo",
-          "nombre": "Unión Giratoria — Perforación Petrolera",
-          "productoPrincipal": true,
-          "imagen": null,
-          "descripcion": "Para equipos rotatorios de perforación de petróleo. Diseñada para alta presión y temperatura continua en campo.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
+          "id": "embrague-neumatico-cb",
+          "nombre": "Embrague/Freno Neumático Tipo CB",
+          "descripcion": "Embrague y freno neumático tipo CB de banda inflable para prensas y equipo de perforación rotaria. Alta disipación de calor.",
+          "imagen": "assets/images/catalogo/embrague-neumatico__fk.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
         },
         {
-          "id": "union-agua",
-          "nombre": "Unión Giratoria — Perforación Acuífera",
-          "productoPrincipal": false,
+          "id": "embrague-neumatico-vc",
+          "nombre": "Embrague/Freno Neumático Tipo VC",
+          "descripcion": "Embrague tipo VC de cono de fricción neumático. Operación suave y precisa para aplicaciones de alta inercia.",
           "imagen": null,
-          "descripcion": "Para equipos de perforación de pozos de agua. Diseño compacto y de bajo mantenimiento en campo.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "embrague-neumatico-eb",
+          "nombre": "Embrague/Freno Neumático Tipo EB y ER",
+          "descripcion": "Embragues tipo EB (expansión exterior) y ER (expansión interior) para drawworks y equipos pesados.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "refacciones-embrague",
+          "nombre": "Refacciones para Embrague/Freno",
+          "descripcion": "Bandas, discos y piezas de repuesto para modelos CB, VC y EB. Piezas originales para prolongar la vida útil del sistema.",
+          "imagen": "assets/images/catalogo/disco-friccion__ceramico.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "campanas-porta-campanas",
+          "nombre": "Campanas y Porta-Campanas",
+          "descripcion": "Campanas de acero y porta-campanas para montaje de embragues neumáticos. Fabricadas bajo especificación del equipo original.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
         }
       ]
     },
     {
-      "id": "valvulas",
+      "id": "rotosellos",
+      "nombre": "Rotosellos",
+      "descripcion": "Uniones giratorias y válvulas neumáticas RUADIGON® para el paso de aire, aceite o agua en sistemas rotativos.",
+      "proveedor": "RUADIGON",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='24' cy='24' r='10' stroke='currentColor' stroke-width='2.5'/><path d='M24 4 L24 14 M24 34 L24 44 M4 24 L14 24 M34 24 L44 24' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><circle cx='24' cy='24' r='3' fill='currentColor'/></svg>",
+      "productos": [
+        {
+          "id": "union-giratoria-ruadigon",
+          "nombre": "Unión Giratoria RUADIGON®",
+          "descripcion": "Unión giratoria de paso simple para conducción de aire, vapor o aceite en equipos rotativos. Acero aleado con sellos de larga duración.",
+          "imagen": "assets/images/catalogo/union-giratoria__rotorseal.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        },
+        {
+          "id": "union-giratoria-bd",
+          "nombre": "Unión Giratoria Tipo BD",
+          "descripcion": "Unión giratoria de doble paso para sistemas que requieren entrada y salida simultánea de fluido. Ideal para cilindros de rodillos industriales.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "valvula-escape-rapido-qrv",
+          "nombre": "Válvula de Escape Rápido Tipo QRV",
+          "descripcion": "Válvula QRV para evacuación rápida de aire en sistemas neumáticos. Acelera el tiempo de respuesta del embrague o freno.",
+          "imagen": "assets/images/catalogo/valvula__diafragma.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "valvula-escape-rapido-w",
+          "nombre": "Válvula de Escape Rápido Tipo W",
+          "descripcion": "Válvula tipo W de escape rápido para alta capacidad de flujo. Compatible con sistemas RUADIGON y embragues GUMMI Group.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        }
+      ]
+    },
+    {
+      "id": "perforacion-terminacion",
+      "nombre": "Perforación y Terminación",
+      "descripcion": "Componentes de hule, empaques y accesorios para bombas y equipos de perforación y terminación de pozos.",
+      "proveedor": "Mecanotecnica",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='4' width='8' height='40' rx='2' stroke='currentColor' stroke-width='2.5'/><path d='M12 16 L20 16 M28 16 L36 16 M12 32 L20 32 M28 32 L36 32' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/></svg>",
+      "productos": [
+        {
+          "id": "bomba-centrifuga-m250",
+          "nombre": "Bomba Centrífuga M-250",
+          "descripcion": "Bomba centrífuga para fluidos de perforación. Caudal y presión de alta eficiencia para pozos petroleros.",
+          "imagen": "assets/images/catalogo/pesca__bomba-centrifuga.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        },
+        {
+          "id": "cano-cabeza-inyeccion",
+          "nombre": "Caño de Agua para Cabeza de Inyección",
+          "descripcion": "Caño de hule para conducción de agua en cabeza de inyección. Alta resistencia a presión y abrasión.",
+          "imagen": "assets/images/catalogo/pesca__cabeza-inyeccion.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaques-bop",
+          "nombre": "Empaques para BOP",
+          "descripcion": "Empaques de hule para preventores de reventones (BOP). Compatibles con equipos Shaffer, Cameron y Hydril.",
+          "imagen": "assets/images/catalogo/hule__empaquetadura-bop.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "limpiador-cable-espiral",
+          "nombre": "Limpiador de Cable en Espiral",
+          "descripcion": "Limpiador de cable de acero en espiral para drawworks. Elimina lodo y sólidos del cable de perforación.",
+          "imagen": "assets/images/catalogo/pesca__limpia-cables.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "copas-pistones-bomba",
+          "nombre": "Copas para Pistones de Bomba",
+          "descripcion": "Copas de hule para pistones de bombas de lodo. Alta resistencia a la abrasión y compatibilidad con fluidos base agua e hidrocarburo.",
+          "imagen": "assets/images/catalogo/hule__copa-piston.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "copas-zapato-anclaje",
+          "nombre": "Copas para Zapato de Anclaje",
+          "descripcion": "Copas seating para anclaje de herramientas en pozos. Alta presión de asiento y sello confiable.",
+          "imagen": "assets/images/catalogo/pesca__copas-pistoneo.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "insertos-valvulas-bomba",
+          "nombre": "Insertos para Válvulas de Bomba",
+          "descripcion": "Insertos de hule para válvulas de succión y descarga de bombas de lodo. Larga vida útil en condiciones abrasivas.",
+          "imagen": "assets/images/catalogo/pesca__inserto-valvula.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "uniones-acoples-rapidos",
+          "nombre": "Uniones para Acoplamientos Rápidos",
+          "descripcion": "Uniones tipo victaulic y acoplamientos rápidos para líneas de fluido en plataformas de perforación.",
+          "imagen": "assets/images/catalogo/union__victaulic.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-t-prensa",
+          "nombre": "Empaquetaduras para T-Prensa",
+          "descripcion": "Empaquetaduras de hule para T-prensa de vastagos de bomba. Sellado hermético bajo presión continua.",
+          "imagen": "assets/images/catalogo/hule__empaquetadura-t-prensa.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "valvulas-integrales-bomba",
+          "nombre": "Válvulas Integrales para Bomba",
+          "descripcion": "Válvulas integrales de succión para bomba de conducción. Combinan asiento y válvula en una sola pieza de hule.",
+          "imagen": "assets/images/catalogo/hule__empaquetadura-vastagos.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "copas-pistoneo",
+          "nombre": "Copas de Pistoneo",
+          "descripcion": "Copas de hule para pistoneo de pozos. Alta resistencia al desgaste en aplicaciones de swabbing y pistoneo.",
+          "imagen": "assets/images/catalogo/pesca__strippers.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "centralizador-varilla",
+          "nombre": "Centralizador de Varilla de Bombeo",
+          "descripcion": "Centralizador de hule para varilla de bombeo. Reduce la fricción y el desgaste del tubing y la varilla en pozos desviados.",
+          "imagen": "assets/images/catalogo/pesca__centralizadores.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        },
+        {
+          "id": "hule-economizador-h",
+          "nombre": "Hule Economizador Tipo H",
+          "descripcion": "Economizador de cable tipo H para limpieza y sello en la cabeza del pozo. Prolonga la vida del cable de acero.",
+          "imagen": "assets/images/catalogo/pesca__economizadores.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "partes-acumulador-amortiguador",
+          "nombre": "Partes para Acumulador y Amortiguador",
+          "descripcion": "Partes de hule para acumuladores, amortiguadores y reguladores de pulsaciones en líneas de descarga de bombas.",
+          "imagen": "assets/images/catalogo/hule__amortiguador-goma.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "tapones-cementacion",
+          "nombre": "Tapones de Cementación",
+          "descripcion": "Tapones de hule para cementación de pozos. Separan el cemento del fluido de desplazamiento con sello positivo.",
+          "imagen": "assets/images/catalogo/pesca__tapones-cementacion.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        }
+      ]
+    },
+    {
+      "id": "acoplamientos-hidraulicos",
+      "nombre": "Acoplamientos Hidráulicos",
+      "descripcion": "Acoplamientos hidráulicos de fluido para transmisión suave de potencia con protección contra sobrecargas.",
+      "proveedor": "",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><ellipse cx='16' cy='24' rx='10' ry='14' stroke='currentColor' stroke-width='2.5'/><ellipse cx='32' cy='24' rx='10' ry='14' stroke='currentColor' stroke-width='2.5'/><path d='M16 18 Q24 12 32 18 M16 30 Q24 36 32 30' stroke='currentColor' stroke-width='2' stroke-dasharray='3 2'/></svg>",
+      "productos": [
+        {
+          "id": "acople-hidraulico",
+          "nombre": "Acoplamiento Hidráulico",
+          "descripcion": "Acoplamiento de fluido para arranque suave de motores eléctricos y protección de la línea de transmisión ante sobrecargas. Elimina el pico de arranque.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        }
+      ]
+    },
+    {
+      "id": "acoples-engranes",
+      "nombre": "Acoples de Engranes",
+      "descripcion": "Acoplamientos flexibles de engrane ESFEROFLEX® para alta capacidad de par y corrección de desalineación.",
+      "proveedor": "",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='16' cy='24' r='8' stroke='currentColor' stroke-width='2.5'/><circle cx='32' cy='24' r='8' stroke='currentColor' stroke-width='2.5'/><path d='M10 20 L8 16 M22 20 L24 16 M10 28 L8 32 M22 28 L24 32' stroke='currentColor' stroke-width='2' stroke-linecap='round'/><path d='M26 20 L24 16 M38 20 L40 16 M26 28 L24 32 M38 28 L40 32' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg>",
+      "productos": [
+        {
+          "id": "esferoflex",
+          "nombre": "Acople Flexible ESFEROFLEX®",
+          "descripcion": "Acoplamiento de engrane esférico para transmisión de alto par con tolerancia a desalineación angular, radial y axial. Lubricación permanente.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        }
+      ]
+    },
+    {
+      "id": "pescadores",
+      "nombre": "Pescadores de Varillas y Cuplas",
+      "descripcion": "Herramientas de pesca para recuperación de varillas de bombeo, cuplas y accesorios caídos al pozo.",
+      "proveedor": "Mecanotecnica",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M24 6 L24 42' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><path d='M14 14 L24 6 L34 14' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/><path d='M16 32 Q24 42 32 32' stroke='currentColor' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>",
+      "productos": [
+        {
+          "id": "pescadores-varillas",
+          "nombre": "Pescadores de Varillas",
+          "descripcion": "Herramienta de pesca para recuperación de varillas de bombeo rotas o atascadas en el pozo. Diseño robusto para alta resistencia a tensión.",
+          "imagen": "assets/images/catalogo/pesca__limpiabarras.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        },
+        {
+          "id": "pescadores-combinados",
+          "nombre": "Pescadores Combinados",
+          "descripcion": "Pescadores combinados con canasta de retención para recuperación simultánea de varillas y sólidos.",
+          "imagen": "assets/images/catalogo/pesca__limpia-vastagos.png",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        }
+      ]
+    },
+    {
+      "id": "valvulas-neumaticas",
       "nombre": "Válvulas Neumáticas",
-      "fabricante": null,
-      "icono": "valve",
-      "descripcionCorta": "Válvulas de control neumático para cuadros de maniobras y equipos perforadores.",
+      "descripcion": "Válvulas, actuadores y aceleradores neumáticos BROFH® para control preciso en sistemas de embrague y freno.",
+      "proveedor": "GUMMI Group",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='8' y='18' width='32' height='12' rx='3' stroke='currentColor' stroke-width='2.5'/><circle cx='24' cy='24' r='4' stroke='currentColor' stroke-width='2.5'/><line x1='24' y1='6' x2='24' y2='18' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><line x1='24' y1='30' x2='24' y2='42' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/></svg>",
       "productos": [
         {
-          "id": "valvula-maniobras",
-          "nombre": "Válvula para Cuadro de Maniobras",
-          "productoPrincipal": true,
-          "imagen": null,
-          "descripcion": "Control neumático para cuadros de maniobras de equipos perforadores. Alta confiabilidad y sello duradero en campo.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
-        }
-      ]
-    },
-    {
-      "id": "materiales-hule",
-      "nombre": "Materiales de Hule",
-      "fabricante": null,
-      "icono": "drum",
-      "descripcionCorta": "Apoyos elastoméricos, empaques y materiales de hule para obra civil, perforación y producción.",
-      "productos": [
-        {
-          "id": "hule-perforacion",
-          "nombre": "Hule para Perforación y Producción",
-          "productoPrincipal": true,
-          "imagen": null,
-          "descripcion": "Materiales resistentes a hidrocarburos para aplicaciones en campo petrolero y acuífero. Alta durabilidad.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
+          "id": "valvulas-brofh",
+          "nombre": "Válvulas/Actuadores BROFH®",
+          "descripcion": "Válvulas y actuadores neumáticos BROFH® para operación de embragues y frenos. Respuesta ultrarrápida y alta confiabilidad en campo.",
+          "imagen": "assets/images/catalogo/valvula__actuador-neumatico.png",
+          "catalogoPdf": null,
+          "productoPrincipal": true
         },
         {
-          "id": "hule-puentes",
-          "nombre": "Hule para Puentes y Obra Civil",
-          "productoPrincipal": false,
+          "id": "kit-menor-reparacion",
+          "nombre": "KIT Menor de Reparación",
+          "descripcion": "Kit de reparación menor con sellos, diafragmas y piezas de desgaste para válvulas BROFH®.",
           "imagen": null,
-          "descripcion": "Apoyos elastoméricos para puentes. Cumple normativas internacionales de ingeniería estructural.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "kit-mayor-reparacion",
+          "nombre": "KIT Mayor de Reparación",
+          "descripcion": "Kit de reparación completo para overhaul de válvulas y actuadores BROFH®. Incluye todos los componentes internos y sellos.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
         }
       ]
     },
     {
-      "id": "herramientas-pesca",
-      "nombre": "Herramientas de Pesca",
-      "fabricante": null,
-      "icono": "star",
-      "descripcionCorta": "Herramientas especializadas para recuperación de objetos en pozos de petróleo y agua.",
+      "id": "embragues-frontales",
+      "nombre": "Embragues Frontales",
+      "descripcion": "Refacciones y componentes para clutches y frenos neumáticos Twin Disc® y Wichita® en equipos de perforación.",
+      "proveedor": "Twin Disc® · Wichita®",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><circle cx='24' cy='24' r='14' stroke='currentColor' stroke-width='2.5'/><path d='M16 20 L24 16 L32 20 L32 28 L24 32 L16 28 Z' stroke='currentColor' stroke-width='2.5' fill='none' stroke-linejoin='round'/></svg>",
       "productos": [
         {
-          "id": "fishing-tools",
-          "nombre": "Fishing Tools — Industria Petrolera y Acuífera",
-          "productoPrincipal": true,
+          "id": "refacciones-twin-disc",
+          "nombre": "Refacciones Twin Disc®",
+          "descripcion": "Refacciones originales para clutch y freno neumático Twin Disc®. Discos de fricción, placas de presión y componentes de desgaste para drawworks.",
           "imagen": null,
-          "descripcion": "Herramientas especializadas para la recuperación de objetos atrapados en pozos de petróleo y agua. Servicio técnico especializado.",
-          "productosIncluidos": [],
-          "catalogoPdf": null
+          "catalogoPdf": null,
+          "productoPrincipal": true
+        },
+        {
+          "id": "toma-fuerza-manual",
+          "nombre": "Toma de Fuerza Manual",
+          "descripcion": "Toma de fuerza manual para transmisión mecánica en equipos de perforación. Alta capacidad de torque y operación confiable.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "refacciones-wichita",
+          "nombre": "Refacciones Wichita®",
+          "descripcion": "Componentes de repuesto para clutch y freno neumático Wichita®. Bandas de fricción, mangueras y elementos de sellado originales.",
+          "imagen": null,
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        }
+      ]
+    },
+    {
+      "id": "tacos-freno",
+      "nombre": "Tacos de Freno",
+      "descripcion": "Materiales de fricción tejidos para drawworks, grúas de plataforma y equipos de izaje. Resistencia extrema a la temperatura, cargas pesadas y ambientes agresivos.",
+      "proveedor": "Indubal",
+      "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='10' y='16' width='28' height='16' rx='3' stroke='currentColor' stroke-width='2.5'/><path d='M18 16 L18 10 M30 16 L30 10' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/><rect x='16' y='22' width='16' height='6' rx='1.5' fill='currentColor' opacity='0.3'/></svg>",
+      "productos": [
+        {
+          "id": "taco-tejido-petrolero",
+          "nombre": "Taco Tejido para Drawworks",
+          "descripcion": "Taco tejido de fricción de alta resistencia para drawworks de equipos de perforación. Coeficiente de fricción estable bajo cargas pesadas, altas temperaturas y ambientes agresivos. Fabricado con materiales libres de asbesto.",
+          "imagen": "assets/images/catalogo/disco-friccion__ceramico.png",
+          "catalogoPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/Catalogo_de_Tacos_Petroleros_Indubal.pdf",
+          "fichaTecnicaPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/ficha_taco_tejido.pdf",
+          "productoPrincipal": true
+        },
+        {
+          "id": "rollo-tejido-petrolero",
+          "nombre": "Rollo Tejido para Equipos de Izaje",
+          "descripcion": "Rollo tejido flexible de material friccional para aplicaciones de alto rendimiento en winches de servicio, grúas de plataforma y sistemas de izaje en industria petrolera.",
+          "imagen": "assets/images/catalogo/disco-friccion__ceramico.png",
+          "catalogoPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/Catalogo_de_Tacos_Petroleros_Indubal.pdf",
+          "fichaTecnicaPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/ficha_rollo_tejido.pdf",
+          "productoPrincipal": false
         }
       ]
     }

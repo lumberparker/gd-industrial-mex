@@ -42,8 +42,16 @@ const CHEVRON_ICON = `<svg class="acordeon__chevron" viewBox="0 0 20 20" xmlns="
   <polyline points="5,8 10,13 15,8"/>
 </svg>`;
 
+/* ── WhatsApp deep-link helper ── */
+function buildWhatsAppUrl(productNombre, categoriaId) {
+  const base = window.location.href.replace(/#.*$/, '').replace(/[^/]*$/, '');
+  const productUrl = base + 'catalogo.html#' + categoriaId;
+  const msg = `Hola, quiero informes acerca de *${productNombre}*. Más información en: ${productUrl}`;
+  return 'https://wa.me/523339555895?text=' + encodeURIComponent(msg);
+}
+
 /* ── Build a single product card ── */
-function buildCard(producto) {
+function buildCard(producto, categoria) {
   const hasPdf    = !!producto.catalogoPdf;
   const hasSeries = producto.productosIncluidos && producto.productosIncluidos.length > 0;
 
@@ -68,11 +76,12 @@ function buildCard(producto) {
        </div>`
     : '';
 
+  const waUrl = buildWhatsAppUrl(producto.nombre, categoria.id);
   const action = hasPdf
     ? `<a class="producto-card__download" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">
         ${DOWNLOAD_ICON} Descargar catálogo
        </a>`
-    : `<a class="producto-card__contact" href="#contacto">Consultar disponibilidad →</a>`;
+    : `<a class="producto-card__contact" href="${waUrl}" target="_blank" rel="noopener noreferrer">Consultar disponibilidad →</a>`;
 
   return `
     <article class="producto-card" data-id="${producto.id}">
@@ -100,7 +109,7 @@ function buildAcordeonItem(categoria, index) {
   const count = categoria.productos.length;
   const countLabel = count === 1 ? '1 producto' : `${count} productos`;
 
-  const cards = categoria.productos.map(buildCard).join('');
+  const cards = categoria.productos.map(p => buildCard(p, categoria)).join('');
 
   return `
     <div class="acordeon__item${index === 0 ? ' acordeon__item--open' : ''}"

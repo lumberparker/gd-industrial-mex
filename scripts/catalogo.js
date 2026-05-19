@@ -41,12 +41,16 @@ const DOWNLOAD_SVG = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg
 
 /* ── Per-category visual themes ── */
 const CAT_THEMES = {
-  'embragues-frenos':    { bg: 'linear-gradient(145deg,#0c1a28 0%,#0f2433 100%)',  accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
-  'coples-flexibles':    { bg: 'linear-gradient(145deg,#081e1a 0%,#0c2820 100%)',  accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
-  'uniones-giratorias':  { bg: 'linear-gradient(145deg,#0c1830 0%,#102040 100%)',  accent: '#4db8ff', glow: 'rgba(77,184,255,0.18)',  iconBg: 'rgba(77,184,255,0.08)', iconBgH: 'rgba(77,184,255,0.16)' },
-  'valvulas':            { bg: 'linear-gradient(145deg,#1a1008 0%,#241408 100%)',  accent: '#e8611a', glow: 'rgba(232,97,26,0.22)',   iconBg: 'rgba(232,97,26,0.08)',  iconBgH: 'rgba(232,97,26,0.16)'  },
-  'materiales-hule':     { bg: 'linear-gradient(145deg,#0c180c 0%,#102014 100%)',  accent: '#5ab85a', glow: 'rgba(90,184,90,0.18)',   iconBg: 'rgba(90,184,90,0.08)',  iconBgH: 'rgba(90,184,90,0.16)'  },
-  'herramientas-pesca':  { bg: 'linear-gradient(145deg,#181408 0%,#20180c 100%)',  accent: '#e8c01a', glow: 'rgba(232,192,26,0.18)',  iconBg: 'rgba(232,192,26,0.08)', iconBgH: 'rgba(232,192,26,0.16)' },
+  'coples-flexibles':         { bg: 'linear-gradient(145deg,#081e1a 0%,#0c2820 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
+  'embragues-neumaticos':     { bg: 'linear-gradient(145deg,#0a1428 0%,#0d1e3c 100%)', accent: '#4db8ff', glow: 'rgba(77,184,255,0.18)',  iconBg: 'rgba(77,184,255,0.08)', iconBgH: 'rgba(77,184,255,0.16)' },
+  'rotosellos':               { bg: 'linear-gradient(145deg,#130c28 0%,#1c0f3a 100%)', accent: '#a78bfa', glow: 'rgba(167,139,250,0.18)', iconBg: 'rgba(167,139,250,0.08)',iconBgH: 'rgba(167,139,250,0.16)'},
+  'perforacion-terminacion':  { bg: 'linear-gradient(145deg,#1a0e06 0%,#281408 100%)', accent: '#e8611a', glow: 'rgba(232,97,26,0.22)',   iconBg: 'rgba(232,97,26,0.08)',  iconBgH: 'rgba(232,97,26,0.16)'  },
+  'acoplamientos-hidraulicos':{ bg: 'linear-gradient(145deg,#081820 0%,#0c2230 100%)', accent: '#22d3ee', glow: 'rgba(34,211,238,0.18)',  iconBg: 'rgba(34,211,238,0.08)', iconBgH: 'rgba(34,211,238,0.16)' },
+  'acoples-engranes':         { bg: 'linear-gradient(145deg,#1a1404 0%,#241c06 100%)', accent: '#f59e0b', glow: 'rgba(245,158,11,0.18)',  iconBg: 'rgba(245,158,11,0.08)', iconBgH: 'rgba(245,158,11,0.16)' },
+  'pescadores':               { bg: 'linear-gradient(145deg,#1c1006 0%,#281808 100%)', accent: '#fb923c', glow: 'rgba(251,146,60,0.20)',  iconBg: 'rgba(251,146,60,0.08)', iconBgH: 'rgba(251,146,60,0.16)' },
+  'valvulas-neumaticas':      { bg: 'linear-gradient(145deg,#1a0808 0%,#260c0c 100%)', accent: '#f87171', glow: 'rgba(248,113,113,0.20)', iconBg: 'rgba(248,113,113,0.08)',iconBgH: 'rgba(248,113,113,0.16)'},
+  'embragues-frontales':      { bg: 'linear-gradient(145deg,#081a0c 0%,#0c2412 100%)', accent: '#4ade80', glow: 'rgba(74,222,128,0.18)',  iconBg: 'rgba(74,222,128,0.08)', iconBgH: 'rgba(74,222,128,0.16)' },
+  'tacos-freno':              { bg: 'linear-gradient(145deg,#1a0a0a 0%,#280e0e 100%)', accent: '#ef4444', glow: 'rgba(239,68,68,0.22)',   iconBg: 'rgba(239,68,68,0.08)',  iconBgH: 'rgba(239,68,68,0.16)'  },
 };
 const DEFAULT_THEME = { bg: 'linear-gradient(145deg,#0c1828 0%,#0f2030 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)', iconBg: 'rgba(0,191,175,0.08)', iconBgH: 'rgba(0,191,175,0.15)' };
 
@@ -66,8 +70,8 @@ function buildChapter(cat) {
          style="background:${t.bg};--cat-accent:${t.accent};--cat-glow:${t.glow};--cat-icon-bg:${t.iconBg};--cat-icon-bg-h:${t.iconBgH};">
       <div class="cat-chapter__glow"></div>
       <div class="cat-chapter__top">
-        ${cat.fabricante
-          ? `<span class="cat-chapter__fab">${cat.fabricante}</span>`
+        ${cat.proveedor
+          ? `<span class="cat-chapter__fab">${cat.proveedor}</span>`
           : `<span></span>`}
         <span class="cat-chapter__count-badge">${count}</span>
       </div>
@@ -176,7 +180,7 @@ function populateStage(catId) {
               data-cat="${c.id}"
               style="${active ? `color:${ct.accent}` : ''}">
         <span class="cat-stage-tab__icon">${ICONS[c.icono] || ICONS.gear}</span>
-        ${c.nombre.split(' ').slice(0, 2).join(' ')}
+        ${c.nombre}
       </button>`;
   }).join('');
 
@@ -189,7 +193,7 @@ function populateStage(catId) {
     <div class="cat-stage__cat-hero-inner">
       <div class="cat-stage__cat-icon" style="color:${t.accent}">${ICONS[cat.icono] || ICONS.gear}</div>
       <div>
-        <span class="cat-stage__cat-label" style="color:${t.accent}">${cat.fabricante || 'Línea especializada'}</span>
+        <span class="cat-stage__cat-label" style="color:${t.accent}">${cat.proveedor || 'Línea especializada'}</span>
         <h2 class="cat-stage__cat-name">${cat.nombre}</h2>
         <p class="cat-stage__cat-desc">${cat.descripcionCorta || ''}</p>
         <span class="cat-stage__cat-count"
@@ -214,6 +218,17 @@ function populateStage(catId) {
 }
 
 /* ─────────────────────────────────────────────
+   WHATSAPP HELPER
+───────────────────────────────────────────── */
+
+function buildWhatsAppUrl(productNombre, categoriaId) {
+  const base = window.location.href.replace(/#.*$/, '').replace(/[^/]*$/, '');
+  const productUrl = base + 'catalogo.html#' + categoriaId;
+  const msg = `Hola, quiero informes acerca de *${productNombre}*. Más información en: ${productUrl}`;
+  return 'https://wa.me/523339555895?text=' + encodeURIComponent(msg);
+}
+
+/* ─────────────────────────────────────────────
    PRODUCT CARD
 ───────────────────────────────────────────── */
 
@@ -225,13 +240,9 @@ function buildProductCard(producto, categoria) {
     ? `background-image:url('${producto.imagen}');background-color:transparent;`
     : '';
 
-  const fabBadge = categoria.fabricante
-    ? `<span class="cat-card__fab-badge">${categoria.fabricante}</span>`
+  const fabBadge = categoria.proveedor
+    ? `<span class="cat-card__fab-badge">${categoria.proveedor}</span>`
     : '';
-
-  const cornerBadge = hasPdf
-    ? `<span class="cat-card__pdf-badge">${DOWNLOAD_SVG} PDF</span>`
-    : `<span class="cat-card__soon-badge">Próximamente</span>`;
 
   const series = hasSeries
     ? `<div>
@@ -242,15 +253,13 @@ function buildProductCard(producto, categoria) {
        </div>`
     : '';
 
-  const action = hasPdf
-    ? `<a class="cat-card__download" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">${DOWNLOAD_SVG} Catálogo PDF</a>`
-    : `<a class="cat-card__contact" href="index.html#contacto">Consultar disponibilidad →</a>`;
+  const waUrl = buildWhatsAppUrl(producto.nombre, categoria.id);
+  const action = `<a class="cat-card__contact" href="${waUrl}" target="_blank" rel="noopener noreferrer">Consultar disponibilidad →</a>`;
 
   return `
     <article class="cat-card" data-id="${producto.id}">
       <div class="cat-card__img" style="${imgStyle}">
         ${fabBadge}
-        ${cornerBadge}
       </div>
       <div class="cat-card__body">
         <h3 class="cat-card__nombre">${producto.nombre}</h3>
