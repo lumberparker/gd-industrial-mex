@@ -40,72 +40,12 @@
   to   { transform: scale(1.06); }
 }
 
-@media (max-width: 1024px) {
-  .hero__overlay {
-    clip-path: polygon(0 0, 70% 0, 60% 100%, 0 100%);
-  }
-  .hero__content {
-    max-width: min(540px, 54vw);
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 100svh;
-    align-items: flex-end;
-    padding-bottom: 48px;
-  }
-
-  /* Full-width solid overlay on mobile — readable text over any photo */
-  .hero__overlay {
-    clip-path: none;
-    background: linear-gradient(
-      to top,
-      rgba(10, 20, 30, 0.97) 0%,
-      rgba(10, 20, 30, 0.88) 55%,
-      rgba(10, 20, 30, 0.55) 100%
-    );
-  }
-
-  .hero__content {
-    padding: 100px var(--pad-x) 0;
-    max-width: 100%;
-  }
-
-  .hero__title {
-    font-size: clamp(40px, 11vw, 64px);
-    margin-bottom: 8px;
-  }
-
-  .hero__subtitle {
-    font-size: clamp(18px, 5.5vw, 30px);
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-  }
-
-  .hero__slogan {
-    font-size: 14px;
-    margin-bottom: 32px;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero__btn {
-    justify-content: center;
-    padding: 14px 24px;
-  }
-}
-
 /* ── Left panel: SOLID dark with diagonal right edge ── */
 .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: #0c1e2e;
-  /* Diagonal cut: top at 62%, bottom at 54% — matches reference */
   clip-path: polygon(0 0, 62% 0, 54% 100%, 0 100%);
 }
 
@@ -140,7 +80,7 @@
   z-index: 2;
   padding: 0 var(--pad-x);
   max-width: min(680px, 50vw);
-  padding-top: 80px; /* clear the header */
+  padding-top: 80px;
 }
 
 .hero__eyebrow {
@@ -231,4 +171,69 @@
 
 .hero__btn--secondary:hover .hero__btn-arrow {
   transform: translateX(5px);
+}
+
+/* ── Tablet (768–1024px): widen overlay and content ── */
+@media (max-width: 1024px) {
+  .hero__overlay {
+    clip-path: polygon(0 0, 75% 0, 65% 100%, 0 100%);
+  }
+  .hero__content {
+    max-width: min(580px, 62vw);
+  }
+}
+
+/* ── Mobile (<768px): full-screen frosted glass, centered layout ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  /* Carousel becomes full background — overlay is frosted glass */
+  .hero__overlay {
+    clip-path: none;
+    background: rgba(8, 14, 22, 0.76);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    padding: 100px var(--pad-x) 60px;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: clamp(40px, 11vw, 64px);
+    margin-bottom: 8px;
+  }
+
+  .hero__subtitle {
+    font-size: clamp(18px, 5.5vw, 30px);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+
+  .hero__slogan {
+    font-size: 14px;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__btn {
+    justify-content: center;
+    padding: 14px 24px;
+    width: 100%;
+    max-width: 280px;
+  }
 }
