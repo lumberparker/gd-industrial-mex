@@ -258,7 +258,7 @@ function buildProductCard(producto, categoria) {
 
   return `
     <article class="cat-card" data-id="${producto.id}">
-      <div class="cat-card__img" style="${imgStyle}">
+      <div class="cat-card__img${producto.imagen ? ' cat-card__img--zoomable' : ''}" style="${imgStyle}" data-img="${producto.imagen || ''}">
         ${fabBadge}
       </div>
       <div class="cat-card__body">
@@ -397,6 +397,40 @@ window.addEventListener('popstate', () => {
   } else {
     closeStage();
   }
+});
+
+/* ─────────────────────────────────────────────
+   IMAGE LIGHTBOX (hover on product cards)
+───────────────────────────────────────────── */
+
+const lightbox = document.createElement('div');
+lightbox.className = 'cat-img-lightbox';
+const lightboxImg = document.createElement('img');
+lightboxImg.className = 'cat-img-lightbox__img';
+lightbox.appendChild(lightboxImg);
+document.body.appendChild(lightbox);
+
+let lightboxTimer = null;
+
+function showLightbox(src) {
+  clearTimeout(lightboxTimer);
+  lightboxImg.src = src;
+  lightbox.classList.add('cat-img-lightbox--visible');
+}
+
+function hideLightbox() {
+  lightboxTimer = setTimeout(() => {
+    lightbox.classList.remove('cat-img-lightbox--visible');
+  }, 80);
+}
+
+document.addEventListener('mouseover', e => {
+  const el = e.target.closest('.cat-card__img--zoomable');
+  if (el && el.dataset.img) showLightbox(el.dataset.img);
+});
+
+document.addEventListener('mouseout', e => {
+  if (e.target.closest('.cat-card__img--zoomable')) hideLightbox();
 });
 
 /* ─────────────────────────────────────────────
