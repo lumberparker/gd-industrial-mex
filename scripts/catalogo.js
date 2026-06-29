@@ -410,27 +410,25 @@ lightboxImg.className = 'cat-img-lightbox__img';
 lightbox.appendChild(lightboxImg);
 document.body.appendChild(lightbox);
 
-let lightboxTimer = null;
-
 function showLightbox(src) {
-  clearTimeout(lightboxTimer);
   lightboxImg.src = src;
   lightbox.classList.add('cat-img-lightbox--visible');
+  document.body.style.overflow = 'hidden';
 }
 
 function hideLightbox() {
-  lightboxTimer = setTimeout(() => {
-    lightbox.classList.remove('cat-img-lightbox--visible');
-  }, 80);
+  lightbox.classList.remove('cat-img-lightbox--visible');
+  document.body.style.overflow = '';
 }
 
-document.addEventListener('mouseover', e => {
+document.addEventListener('click', e => {
   const el = e.target.closest('.cat-card__img--zoomable');
-  if (el && el.dataset.img) showLightbox(el.dataset.img);
+  if (el && el.dataset.img) { showLightbox(el.dataset.img); return; }
+  if (e.target.closest('.cat-img-lightbox')) hideLightbox();
 });
 
-document.addEventListener('mouseout', e => {
-  if (e.target.closest('.cat-card__img--zoomable')) hideLightbox();
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') hideLightbox();
 });
 
 /* ─────────────────────────────────────────────

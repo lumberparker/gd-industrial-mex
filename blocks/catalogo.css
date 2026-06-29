@@ -498,20 +498,24 @@
 
 .cat-card__img--zoomable { cursor: zoom-in; }
 
-/* ── Image lightbox on hover ── */
+/* ── Image lightbox on click ── */
 .cat-img-lightbox {
   position: fixed;
   inset: 0;
   z-index: 9000;
-  background: rgba(8, 18, 27, 0.82);
+  background: rgba(8, 18, 27, 0.88);
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.18s ease;
+  cursor: zoom-out;
 }
-.cat-img-lightbox--visible { opacity: 1; }
+.cat-img-lightbox--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 .cat-img-lightbox__img {
   max-width: min(88vw, 720px);
   max-height: 80vh;
