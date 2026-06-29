@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mundial-2026",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/rodneyparker/Mundial 2026/serve-nocache.py", "8770", "/Users/rodneyparker/Mundial 2026"],
+      "port": 8770
+    }
+  ]
+}
