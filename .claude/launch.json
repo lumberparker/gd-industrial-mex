@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["/Users/rodneyparker/Mundial 2026/serve-nocache.py", "8770", "/Users/rodneyparker/Mundial 2026"],
       "port": 8770
+    },
+    {
+      "name": "gd-industrial",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8771", "--directory", "/Users/rodneyparker/G&D"],
+      "port": 8771
     }
   ]
 }

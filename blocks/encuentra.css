@@ -22,13 +22,13 @@
 .encuentra__container {
   position: relative;
   z-index: 1;
-  max-width: var(--container);
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 var(--pad-x);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* ── Info column ── */
@@ -55,45 +55,50 @@
   font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.85;
-  margin-bottom: 36px;
-}
-
-.encuentra__channels {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  margin-bottom: 40px;
 }
 
 .encuentra__whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
   background: #25d366;
   color: white;
-  padding: 15px 26px;
+  padding: 18px 36px;
   border-radius: 6px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  align-self: flex-start;
+  margin-bottom: 52px;
 }
 
 .encuentra__whatsapp:hover {
   background: #1db954;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.35);
 }
 
 .encuentra__whatsapp svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
+}
+
+.encuentra__channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
 }
 
 .encuentra__contact-item {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  align-items: center;
 }
 
 .encuentra__contact-label {
@@ -109,99 +114,15 @@
   color: rgba(255, 255, 255, 0.65);
 }
 
-/* ── Form ── */
-.encuentra__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.encuentra__field {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.encuentra__field-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.encuentra__input {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
-  padding: 13px 16px;
-  color: var(--color-white);
-  font-family: var(--font-body);
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  width: 100%;
-}
-
-.encuentra__input::placeholder {
-  color: rgba(255, 255, 255, 0.25);
-}
-
-.encuentra__input:focus {
-  border-color: var(--color-teal);
-  background: rgba(0, 180, 166, 0.06);
-}
-
-.encuentra__select {
-  appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300b4a6' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-}
-
-.encuentra__textarea {
-  resize: vertical;
-  min-height: 110px;
-}
-
-.encuentra__submit {
-  background: var(--color-orange);
-  color: var(--color-white);
-  border: none;
-  padding: 15px 36px;
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 700;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  align-self: flex-start;
-  letter-spacing: 0.5px;
-}
-
-.encuentra__submit:hover {
-  background: var(--color-orange-h);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232, 97, 26, 0.3);
-}
-
-.encuentra__submit--sent {
-  background: #25d366 !important;
-  transform: none !important;
-}
-
-@media (max-width: 1024px) {
-  .encuentra__container {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .encuentra__whatsapp,
-  .encuentra__submit {
+@media (max-width: 600px) {
+  .encuentra__whatsapp {
     width: 100%;
     justify-content: center;
-    align-self: stretch;
+  }
+
+  .encuentra__channels {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
