@@ -221,10 +221,8 @@ function populateStage(catId) {
    WHATSAPP HELPER
 ───────────────────────────────────────────── */
 
-function buildWhatsAppUrl(productNombre, categoriaId) {
-  const base = window.location.href.replace(/#.*$/, '').replace(/[^/]*$/, '');
-  const productUrl = base + 'catalogo.html#' + categoriaId;
-  const msg = `Hola, quiero informes acerca de *${productNombre}*. Más información en: ${productUrl}`;
+function buildWhatsAppUrl() {
+  const msg = 'Hola, me gustaría recibir información sobre sus productos y disponibilidad.';
   return 'https://wa.me/523339555895?text=' + encodeURIComponent(msg);
 }
 
@@ -253,7 +251,7 @@ function buildProductCard(producto, categoria) {
        </div>`
     : '';
 
-  const waUrl = buildWhatsAppUrl(producto.nombre, categoria.id);
+  const waUrl = buildWhatsAppUrl();
   const action = producto.catalogoPdf
     ? `<a class="cat-card__pdf-link" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">Ver Catálogo →</a>`
     : `<a class="cat-card__contact" href="${waUrl}" target="_blank" rel="noopener noreferrer">Consultar disponibilidad →</a>`;
