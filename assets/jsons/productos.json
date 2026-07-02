@@ -146,6 +146,14 @@
           "catalogoPdf": null,
           "productoPrincipal": true
         }
+        {
+          "id": "disco-dentado",
+          "nombre": "Disco Dentado",
+          "descripcion": null,
+          "imagen": "assets/images/catalogo/discos-dentados.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        }
       ]
     },
     {
