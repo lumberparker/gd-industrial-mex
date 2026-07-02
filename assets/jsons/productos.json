@@ -148,8 +148,8 @@
         },
         {
           "id": "disco-dentado",
-          "nombre": "Disco Dentado",
-          "descripcion": null,
+          "nombre": "Discos Dentados",
+          "descripcion": "",
           "imagen": "assets/images/catalogo/discos-dentados.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
