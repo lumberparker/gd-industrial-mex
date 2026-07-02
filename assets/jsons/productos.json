@@ -12,7 +12,7 @@
           "nombre": "Acople Elástico Tipo X",
           "descripcion": "Acople flexible de elastómero tipo X para transmisión de par con amortiguación de vibraciones torsionales. Alta tolerancia a desalineaciones. BANDA ELASTICA ENTERA con bridas vulcanizadas.",
           "imagen": "assets/images/catalogo/acople-elastico-x.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo acople flexible tipo X.pdf",
           "productoPrincipal": true
         },
         {
@@ -20,7 +20,7 @@
           "nombre": "Acople Reforzado",
           "descripcion": "Acople de alta resistencia para aplicaciones de maquinaria pesada. Diseñado para transmitir mayor par con vida útil extendida.",
           "imagen": "assets/images/catalogo/acople-reforzado.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo acople reforzado.pdf",
           "productoPrincipal": false
         },
         {
@@ -28,7 +28,7 @@
           "nombre": "Acople Dentado de Acero ESFEROFLEX®",
           "descripcion": "Acoplamiento de engrane esférico para transmisión de alto par con tolerancia a desalineación angular, radial y axial. Lubricación permanente.",
           "imagen": "assets/images/catalogo/acople-dentado.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo acople dentado.pdf",
           "productoPrincipal": false
         },
         {
@@ -70,7 +70,7 @@
           "nombre": "Embrague/Freno Neumático Tipo CB",
           "descripcion": "Los elementos neumáticos Serie CB pueden ser utilizados tanto como embrague ó como freno en aplicaciones generales de transmisión de potencia.",
           "imagen": "assets/images/catalogo/embrague-neumatico-cb.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo embrague CB.pdf",
           "productoPrincipal": true
         },
         {
@@ -78,7 +78,7 @@
           "nombre": "Embrague/Freno Neumático Tipo VC",
           "descripcion": "Los elementos neumáticos ventilados Serie VC están específicamente diseñados para aplicaciones muy exigentes de freno o embrague donde existen grandes cargas inerciales con un deslizamiento prolongado, que normalmente resulta en la pérdida de torque y en una vida útil reducida para los embragues de la Serie CB que no consiguen disipar el calor generado por el servicio muy severo.",
           "imagen": "assets/images/catalogo/embrague-neumatico-vc.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo embrague vc.pdf",
           "productoPrincipal": false
         },
         {
@@ -86,7 +86,7 @@
           "nombre": "Embrague/Freno Neumático Tipo EB",
           "descripcion": "Los elementos neumáticos Serie EB están diseñados para aplicaciones de arranques y paradas de baja velocidad con cargas moderadas. Son generalmente utilizados como embragues de deslizamiento continuo y como frenos tensionadores para bajos torques.",
           "imagen": "assets/images/catalogo/embrague-neumatico-eb.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo embrague EB y ER.pdf",
           "productoPrincipal": false
         },
         {
@@ -94,7 +94,7 @@
           "nombre": "Embrague/Freno Neumático Tipo ER",
           "descripcion": "El elemento ER transmite un torque más alto que el EB, debido a que el coeficiente de fricción entre el tambor y el elemento neumático es mayor por el tipo de superficie de contacto.",
           "imagen": "assets/images/catalogo/embrague-neumatico-er.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo embrague EB y ER.pdf",
           "productoPrincipal": false
         },
         {
@@ -102,7 +102,7 @@
           "nombre": "Embrague/Freno Tipo CB Bi-Partido (Split)",
           "descripcion": "Embragues del tipo CB partidos que facilitan enormemente la instalación sin tener que mover partes del equipo.",
           "imagen": "assets/images/catalogo/embrague-split.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo embrague split.pdf",
           "productoPrincipal": false
         },
         {
@@ -160,7 +160,7 @@
           "nombre": "Unión Giratoria RUADIGON®",
           "descripcion": "Uniones giratorias modelos B3, C2, BD de paso simple o doble para conducción de AIRE en equipos rotativos.",
           "imagen": "assets/images/catalogo/union-giratoria.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo union giratoria.pdf",
           "productoPrincipal": true
         },
         {
@@ -314,7 +314,7 @@
           "nombre": "Pescadores de Varillas",
           "descripcion": "Herramienta de pesca para recuperación de varillas de bombeo rotas o atascadas en el pozo. Diseño robusto para alta resistencia a tensión. Pescadores combinados con canasta de retención para recuperación simultánea de varillas y sólidos.",
           "imagen": "assets/images/catalogo/pescadores-varillas.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/catalogo pescadores de varilla.pdf",
           "productoPrincipal": true
         }
       ]

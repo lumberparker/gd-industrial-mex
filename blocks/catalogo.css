@@ -612,6 +612,13 @@
 }
 .cat-card__contact:hover { letter-spacing: 0.5px; }
 
+.cat-card__pdf-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--color-teal);
+  transition: letter-spacing 0.2s;
+}
+.cat-card__pdf-link:hover { letter-spacing: 0.5px; }
+
 /* ============================================================
    COMMAND PALETTE SEARCH
    ============================================================ */

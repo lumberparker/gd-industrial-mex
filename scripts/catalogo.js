@@ -254,7 +254,9 @@ function buildProductCard(producto, categoria) {
     : '';
 
   const waUrl = buildWhatsAppUrl(producto.nombre, categoria.id);
-  const action = `<a class="cat-card__contact" href="${waUrl}" target="_blank" rel="noopener noreferrer">Consultar disponibilidad →</a>`;
+  const action = producto.catalogoPdf
+    ? `<a class="cat-card__pdf-link" href="${producto.catalogoPdf}" target="_blank" rel="noopener noreferrer">Ver Catálogo →</a>`
+    : `<a class="cat-card__contact" href="${waUrl}" target="_blank" rel="noopener noreferrer">Consultar disponibilidad →</a>`;
 
   return `
     <article class="cat-card" data-id="${producto.id}">
