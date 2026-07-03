@@ -41,16 +41,20 @@ const DOWNLOAD_SVG = `<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg
 
 /* ── Per-category visual themes ── */
 const CAT_THEMES = {
-  'coples-flexibles':         { bg: 'linear-gradient(145deg,#081e1a 0%,#0c2820 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
+  'acoples-flexibles':        { bg: 'linear-gradient(145deg,#081e1a 0%,#0c2820 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)',   iconBg: 'rgba(0,191,175,0.08)',  iconBgH: 'rgba(0,191,175,0.16)'  },
+  'acople-hidraulico':        { bg: 'linear-gradient(145deg,#081820 0%,#0c2230 100%)', accent: '#22d3ee', glow: 'rgba(34,211,238,0.18)',  iconBg: 'rgba(34,211,238,0.08)', iconBgH: 'rgba(34,211,238,0.16)' },
   'embragues-neumaticos':     { bg: 'linear-gradient(145deg,#0a1428 0%,#0d1e3c 100%)', accent: '#4db8ff', glow: 'rgba(77,184,255,0.18)',  iconBg: 'rgba(77,184,255,0.08)', iconBgH: 'rgba(77,184,255,0.16)' },
+  'embragues-frontales':      { bg: 'linear-gradient(145deg,#081a0c 0%,#0c2412 100%)', accent: '#4ade80', glow: 'rgba(74,222,128,0.18)',  iconBg: 'rgba(74,222,128,0.08)', iconBgH: 'rgba(74,222,128,0.16)' },
   'rotosellos':               { bg: 'linear-gradient(145deg,#130c28 0%,#1c0f3a 100%)', accent: '#a78bfa', glow: 'rgba(167,139,250,0.18)', iconBg: 'rgba(167,139,250,0.08)',iconBgH: 'rgba(167,139,250,0.16)'},
   'perforacion-terminacion':  { bg: 'linear-gradient(145deg,#1a0e06 0%,#281408 100%)', accent: '#e8611a', glow: 'rgba(232,97,26,0.22)',   iconBg: 'rgba(232,97,26,0.08)',  iconBgH: 'rgba(232,97,26,0.16)'  },
-  'acoplamientos-hidraulicos':{ bg: 'linear-gradient(145deg,#081820 0%,#0c2230 100%)', accent: '#22d3ee', glow: 'rgba(34,211,238,0.18)',  iconBg: 'rgba(34,211,238,0.08)', iconBgH: 'rgba(34,211,238,0.16)' },
-  'acoples-engranes':         { bg: 'linear-gradient(145deg,#1a1404 0%,#241c06 100%)', accent: '#f59e0b', glow: 'rgba(245,158,11,0.18)',  iconBg: 'rgba(245,158,11,0.08)', iconBgH: 'rgba(245,158,11,0.16)' },
+  'produccion-oil-gas':       { bg: 'linear-gradient(145deg,#1a1404 0%,#241c06 100%)', accent: '#f59e0b', glow: 'rgba(245,158,11,0.18)',  iconBg: 'rgba(245,158,11,0.08)', iconBgH: 'rgba(245,158,11,0.16)' },
+  'mineria-litio':            { bg: 'linear-gradient(145deg,#06191a 0%,#082224 100%)', accent: '#2dd4bf', glow: 'rgba(45,212,191,0.18)',  iconBg: 'rgba(45,212,191,0.08)', iconBgH: 'rgba(45,212,191,0.16)' },
+  'construccion-vial':        { bg: 'linear-gradient(145deg,#181200 0%,#221a00 100%)', accent: '#fbbf24', glow: 'rgba(251,191,36,0.20)',  iconBg: 'rgba(251,191,36,0.08)', iconBgH: 'rgba(251,191,36,0.16)' },
+  'papeleras':                { bg: 'linear-gradient(145deg,#1a0818 0%,#260c24 100%)', accent: '#f472b6', glow: 'rgba(244,114,182,0.18)', iconBg: 'rgba(244,114,182,0.08)',iconBgH: 'rgba(244,114,182,0.16)'},
   'pescadores':               { bg: 'linear-gradient(145deg,#1c1006 0%,#281808 100%)', accent: '#fb923c', glow: 'rgba(251,146,60,0.20)',  iconBg: 'rgba(251,146,60,0.08)', iconBgH: 'rgba(251,146,60,0.16)' },
   'valvulas-neumaticas':      { bg: 'linear-gradient(145deg,#1a0808 0%,#260c0c 100%)', accent: '#f87171', glow: 'rgba(248,113,113,0.20)', iconBg: 'rgba(248,113,113,0.08)',iconBgH: 'rgba(248,113,113,0.16)'},
-  'embragues-frontales':      { bg: 'linear-gradient(145deg,#081a0c 0%,#0c2412 100%)', accent: '#4ade80', glow: 'rgba(74,222,128,0.18)',  iconBg: 'rgba(74,222,128,0.08)', iconBgH: 'rgba(74,222,128,0.16)' },
-  'tacos-freno':              { bg: 'linear-gradient(145deg,#1a0a0a 0%,#280e0e 100%)', accent: '#ef4444', glow: 'rgba(239,68,68,0.22)',   iconBg: 'rgba(239,68,68,0.08)',  iconBgH: 'rgba(239,68,68,0.16)'  },
+  'balata-tejida-freno':      { bg: 'linear-gradient(145deg,#1a0a0a 0%,#280e0e 100%)', accent: '#ef4444', glow: 'rgba(239,68,68,0.22)',   iconBg: 'rgba(239,68,68,0.08)',  iconBgH: 'rgba(239,68,68,0.16)'  },
+  'cinta-balata-tejida':      { bg: 'linear-gradient(145deg,#180814 0%,#220c1c 100%)', accent: '#e879f9', glow: 'rgba(232,121,249,0.18)', iconBg: 'rgba(232,121,249,0.08)',iconBgH: 'rgba(232,121,249,0.16)'},
 };
 const DEFAULT_THEME = { bg: 'linear-gradient(145deg,#0c1828 0%,#0f2030 100%)', accent: '#00bfaf', glow: 'rgba(0,191,175,0.18)', iconBg: 'rgba(0,191,175,0.08)', iconBgH: 'rgba(0,191,175,0.15)' };
 
