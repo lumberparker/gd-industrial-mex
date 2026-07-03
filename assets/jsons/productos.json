@@ -189,122 +189,194 @@
       "icono": "<svg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='4' width='8' height='40' rx='2' stroke='currentColor' stroke-width='2.5'/><path d='M12 16 L20 16 M28 16 L36 16 M12 32 L20 32 M28 32 L36 32' stroke='currentColor' stroke-width='2.5' stroke-linecap='round'/></svg>",
       "productos": [
         {
-          "id": "bomba-centrifuga-m250",
-          "nombre": "Bomba Centrífuga M-250",
-          "descripcion": "Bomba centrífuga para fluidos de perforación. Caudal y presión de alta eficiencia para pozos petroleros.",
-          "imagen": "assets/images/catalogo/bomba-centrifuga-m250.jpg",
+          "id": "empaquetaduras-t-prensa",
+          "nombre": "Empaquetaduras para T-Prensa",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-t-prensa.jpg",
           "catalogoPdf": null,
           "productoPrincipal": true
         },
         {
-          "id": "cano-cabeza-inyeccion",
-          "nombre": "Caño de Agua para Cabeza de Inyección",
-          "descripcion": "Caño de hule para conducción de agua en cabeza de inyección. Alta resistencia a presión y abrasión.",
-          "imagen": "assets/images/catalogo/cano-cabeza-inyeccion.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "empaques-bop",
-          "nombre": "Empaques para BOP",
-          "descripcion": "Empaques de hule para preventores de reventones (BOP). Compatibles con equipos Shaffer®, Cameron® y Hydril®.",
-          "imagen": "assets/images/catalogo/mecanotecnica__empaques-bop.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "limpiador-cable-espiral",
-          "nombre": "Limpiador de Cable en Espiral",
-          "descripcion": "Limpiador de cable de acero en espiral para drawworks. Elimina lodo y sólidos del cable de perforación.",
-          "imagen": "assets/images/catalogo/mecanotecnica__limpiador-cable-espiral.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "copas-pistones-bomba",
-          "nombre": "Copas para Pistones de Bomba",
-          "descripcion": "Copas de hule para pistones de bombas de lodo. Alta resistencia a la abrasión y compatibilidad con fluidos base agua e hidrocarburo.",
-          "imagen": "assets/images/catalogo/mecanotecnica__copas-pistones-bomba.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "copas-zapato-anclaje",
-          "nombre": "Copas para Zapato de Anclaje",
-          "descripcion": "Copas seating para anclaje de herramientas en pozos. Alta presión de asiento y sello confiable.",
-          "imagen": "assets/images/catalogo/mecanotecnica__copas-zapato-anclaje.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "insertos-valvulas-bomba",
-          "nombre": "Insertos para Válvulas de Bomba",
-          "descripcion": "Insertos de hule para válvulas de succión y descarga de bombas de lodo. Larga vida útil en condiciones abrasivas.",
-          "imagen": "assets/images/catalogo/mecanotecnica__insertos-valvulas-bomba.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "uniones-acoples-rapidos",
-          "nombre": "Uniones para Acoplamientos Rápidos",
-          "descripcion": "Uniones tipo victaulic y acoplamientos rápidos para líneas de fluido en plataformas de perforación.",
-          "imagen": "assets/images/catalogo/mecanotecnica__uniones-acoples-rapidos.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "empaquetaduras-t-prensa",
-          "nombre": "Empaquetaduras para T-Prensa",
-          "descripcion": "Empaquetaduras de hule para T-prensa de vastagos de bomba. Sellado hermético bajo presión continua.",
-          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-t-prensa.jpg",
-          "catalogoPdf": null,
-          "productoPrincipal": false
-        },
-        {
-          "id": "valvulas-integrales-bomba",
-          "nombre": "Válvulas Integrales para Bomba",
-          "descripcion": "Válvulas integrales de succión para bomba de conducción. Combinan asiento y válvula en una sola pieza de hule.",
-          "imagen": "assets/images/catalogo/mecanotecnica__valvulas-integrales-bomba.jpg",
+          "id": "economizadores",
+          "nombre": "Economizadores",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__economizadores.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
         {
           "id": "copas-pistoneo",
           "nombre": "Copas de Pistoneo",
-          "descripcion": "Copas de hule para pistoneo de pozos. Alta resistencia al desgaste en aplicaciones de swabbing y pistoneo.",
+          "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__copas-pistoneo.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
         {
-          "id": "centralizador-varilla",
-          "nombre": "Centralizador de Varilla de Bombeo",
-          "descripcion": "Centralizador de hule para varilla de bombeo. Reduce la fricción y el desgaste del tubing y la varilla en pozos desviados.",
-          "imagen": "assets/images/catalogo/mecanotecnica__centralizador-varilla.jpg",
+          "id": "limpiabarras-sondeo",
+          "nombre": "Limpiabarras de Sondeo",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__limpiabarras-sondeo.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
         {
-          "id": "hule-economizador-h",
-          "nombre": "Hule Economizador Tipo H",
-          "descripcion": "Economizador de cable tipo H para limpieza y sello en la cabeza del pozo. Prolonga la vida del cable de acero.",
-          "imagen": "assets/images/catalogo/mecanotecnica__hule-economizador-h.jpg",
+          "id": "copas-piston-bombas-inyeccion",
+          "nombre": "Copas de Pistón para Bombas de Inyección",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__copas-piston-bombas-inyeccion.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
         {
-          "id": "partes-acumulador-amortiguador",
-          "nombre": "Partes para Acumulador y Amortiguador",
-          "descripcion": "Partes de hule para acumuladores, amortiguadores y reguladores de pulsaciones en líneas de descarga de bombas.",
-          "imagen": "assets/images/catalogo/mecanotecnica__partes-acumulador-amortiguador.jpg",
+          "id": "repuestos-bop",
+          "nombre": "Repuestos e Insumos para B.O.P.",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__repuestos-bop.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "bomba-centrifuga-m250",
+          "nombre": "Bomba Centrífuga M-250",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__bomba-centrifuga-m250.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "uniones-rapidas-victaulic",
+          "nombre": "Uniones Rápidas – Tipo Victaulic",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__uniones-rapidas-victaulic.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "limpia-varillas",
+          "nombre": "Limpia Varillas",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__limpia-varillas.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
         {
           "id": "tapones-cementacion",
           "nombre": "Tapones de Cementación",
-          "descripcion": "Tapones de hule para cementación de pozos. Separan el cemento del fluido de desplazamiento con sello positivo.",
+          "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__tapones-cementacion.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "insertos-valvulas",
+          "nombre": "Insertos para Válvulas",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__insertos-valvulas.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "canos-lavadores",
+          "nombre": "Caños Lavadores",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__canos-lavadores.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "uniones-para-tanques",
+          "nombre": "Uniones para Tanques",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__uniones-para-tanques.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "limpia-vastagos",
+          "nombre": "Limpia Vástagos",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__limpia-vastagos.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-vastagos",
+          "nombre": "Empaquetaduras para Vástagos",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-vastagos.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-uniones-rapidas",
+          "nombre": "Empaquetaduras para Uniones Rápidas",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-uniones-rapidas.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "cabezas-inyeccion",
+          "nombre": "Cabezas de Inyección",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__cabezas-inyeccion.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "amortiguadores-pulsos",
+          "nombre": "Amortiguadores de Pulsos",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__amortiguadores-pulsos.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "limpia-cables",
+          "nombre": "Limpia Cables",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__limpia-cables.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-embolo-buzo",
+          "nombre": "Empaquetaduras para Émbolo Buzo",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-embolo-buzo.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-ratigan",
+          "nombre": "Empaquetaduras Ratigan, Danco y Adita",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-ratigan.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "empaquetaduras-bop",
+          "nombre": "Empaquetaduras para B.O.P.",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-bop.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "strippers",
+          "nombre": "Strippers",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__strippers.jpg",
+          "catalogoPdf": null,
+          "productoPrincipal": false
+        },
+        {
+          "id": "orings",
+          "nombre": "O’Rings",
+          "descripcion": "",
+          "imagen": "assets/images/catalogo/mecanotecnica__orings.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         }
