@@ -466,7 +466,7 @@
           "id": "empaquetaduras-tapa-valvula",
           "nombre": "Empaquetaduras para Tapa de Válvula",
           "descripcion": "",
-          "imagen": null,
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-tapa-valvula.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
@@ -474,7 +474,7 @@
           "id": "empaquetaduras-camisas",
           "nombre": "Empaquetaduras para Camisas",
           "descripcion": "",
-          "imagen": null,
+          "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-camisas.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
@@ -490,7 +490,7 @@
           "id": "juntas-empaques-moldeados",
           "nombre": "Juntas / Empaques Moldeados",
           "descripcion": "",
-          "imagen": null,
+          "imagen": "assets/images/catalogo/mecanotecnica__juntas-empaques-moldeados.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         },
@@ -506,7 +506,7 @@
           "id": "amortiguador-goma",
           "nombre": "Amortiguador de Goma",
           "descripcion": "",
-          "imagen": null,
+          "imagen": "assets/images/catalogo/mecanotecnica__amortiguador-goma.jpg",
           "catalogoPdf": null,
           "productoPrincipal": false
         }
