@@ -43,7 +43,7 @@ G&D/
 
 ### `productos.json`
 
-Es la **única fuente de verdad** del catálogo. Agregar o eliminar una categoría o producto aquí se refleja automáticamente en el sitio sin tocar HTML.
+Es la **única fuente de verdad** del catálogo. Agregar o eliminar una categoría o producto aquí se refleja automáticamente en el sitio sin tocar HTML. Se decidió así para que el cliente pueda mantener el catálogo actualizado sin necesidad de editar código.
 
 **Estructura:**
 
@@ -113,8 +113,8 @@ Ejemplos:
 
 - Formato preferido: **JPG**
 - Tamaño máximo recomendado: **1920px** en el lado más largo
-- Las imágenes se muestran en modo `contain` (imagen completa, sin recorte)
-- Click en la imagen abre un lightbox a pantalla completa
+- Las imágenes se muestran en modo `contain` (imagen completa, sin recorte) — para que el producto se vea completo y no aparezca cortado en la tarjeta
+- Click en la imagen abre un lightbox a pantalla completa — se eligió click en lugar de hover para evitar que la imagen se abriera accidentalmente al pasar el cursor
 
 ---
 
@@ -122,16 +122,20 @@ Ejemplos:
 
 - **11 slides** (`hero__slide-1.jpg` a `hero__slide-11.jpg`)
 - Slides 1–3 también existen en `.avif` para navegadores modernos
-- Todas las slides están comprimidas a JPG, máx 1920px (~500–950 KB cada una)
+- Todas las slides están comprimidas a JPG, máx 1920px (~500–950 KB cada una) — las imágenes originales llegaron como PNG de hasta 9 MB cada una (~60 MB en total), lo que hacía que el sitio tardara demasiado en cargar. La compresión redujo el peso total a ~5.8 MB
 - Para agregar más slides: subir imagen comprimida y agregar el `<div class="hero__slide">` en `index.html`
 
 ---
 
 ## Sección de Contacto
 
-La sección "Encuéntranos" no tiene formulario. El CTA principal es un botón de WhatsApp que abre una conversación con el mensaje genérico:
+La sección "Encuéntranos" no tiene formulario — se eliminó porque no era funcional (no tenía backend que procesara los envíos). Se reemplazó con un botón de WhatsApp como CTA principal, que es más directo y no requiere infraestructura adicional.
+
+El botón abre una conversación con el mensaje genérico:
 
 > *"Hola, me gustaría recibir información sobre sus productos y disponibilidad."*
+
+El mensaje es genérico a propósito — no incluye nombre de producto ni liga al sitio para que la conversación se sienta natural y no automatizada.
 
 Teléfono configurado: `+52 333 955 5895`
 
@@ -139,7 +143,9 @@ Para cambiar el número, editar `scripts/catalogo.js` (función `buildWhatsAppUr
 
 ---
 
-## PDFs Disponibles (10 productos)
+## PDFs en el Catálogo
+
+Cuando un producto tiene catálogo disponible, se muestra el botón "Ver Catálogo →" que abre el PDF directamente. Si no hay PDF, se muestra el botón de WhatsApp. Esto permite dar acceso inmediato a la ficha técnica sin necesidad de contactar al equipo, agilizando la decisión de compra.
 
 | Producto | Archivo |
 |---|---|
