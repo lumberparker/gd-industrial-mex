@@ -203,17 +203,3 @@ O usar el servidor configurado en `.claude/launch.json` con la herramienta de pr
 ### ⏳ Pendiente
 
 - **Catálogos PDF faltantes** — a la espera de recibir los archivos para los productos restantes
-- **Imágenes de Mecanotécnica** — en proceso; los siguientes nombres de archivo están esperando sus imágenes:
-  - `mecanotecnica__empaques-bop.jpg`
-  - `mecanotecnica__limpiador-cable-espiral.jpg`
-  - `mecanotecnica__copas-pistones-bomba.jpg`
-  - `mecanotecnica__copas-zapato-anclaje.jpg`
-  - `mecanotecnica__insertos-valvulas-bomba.jpg`
-  - `mecanotecnica__uniones-acoples-rapidos.jpg`
-  - `mecanotecnica__empaquetaduras-t-prensa.jpg`
-  - `mecanotecnica__valvulas-integrales-bomba.jpg`
-  - `mecanotecnica__copas-pistoneo.jpg`
-  - `mecanotecnica__centralizador-varilla.jpg`
-  - `mecanotecnica__hule-economizador-h.jpg`
-  - `mecanotecnica__partes-acumulador-amortiguador.jpg`
-  - `mecanotecnica__tapones-cementacion.jpg`
