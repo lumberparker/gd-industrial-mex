@@ -5,6 +5,12 @@
 
   let current = 0;
 
+  // Preload all slide images so transitions don't flash blank
+  slides.forEach(slide => {
+    const url = slide.style.backgroundImage.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+    if (url) { const img = new Image(); img.src = url; }
+  });
+
   setInterval(() => {
     slides[current].classList.remove('hero__slide--active');
     current = (current + 1) % slides.length;
