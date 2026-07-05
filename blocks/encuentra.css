@@ -4,7 +4,7 @@
 
 .encuentra {
   padding: var(--pad-section) 0;
-  background: var(--color-navy);
+  background: #0a1e1c;
   position: relative;
   overflow: hidden;
 }

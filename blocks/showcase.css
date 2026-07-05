@@ -4,7 +4,7 @@
 
 .showcase {
   padding: var(--pad-section) 0;
-  background: var(--color-navy);
+  background: #080f15;
   overflow: hidden;
 }
 
