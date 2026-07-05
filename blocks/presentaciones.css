@@ -91,6 +91,16 @@
   background-color: #12181a;
 }
 
+.presentaciones__img--alimentaria {
+  background-image: url('../assets/images/industry-alimentaria.jpg');
+  background-color: #0e1a0e;
+}
+
+.presentaciones__img--papelera {
+  background-image: url('../assets/images/industry-papelera.jpg');
+  background-color: #0c1218;
+}
+
 /* Teal accent line at bottom of image */
 .presentaciones__img-overlay {
   position: absolute;
