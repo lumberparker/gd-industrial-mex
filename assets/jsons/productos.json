@@ -193,7 +193,7 @@
           "nombre": "Empaquetaduras para T-Prensa",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-t-prensa.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": true
         },
         {
@@ -201,7 +201,7 @@
           "nombre": "Economizadores",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__economizadores.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -209,7 +209,7 @@
           "nombre": "Copas de Pistoneo",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__copas-pistoneo.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -217,7 +217,7 @@
           "nombre": "Limpiabarras de Sondeo",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__limpiabarras-sondeo.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -225,7 +225,7 @@
           "nombre": "Copas de Pistón para Bombas de Inyección",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__copas-piston-bombas-inyeccion.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -233,7 +233,7 @@
           "nombre": "Repuestos e Insumos para B.O.P.",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__repuestos-bop.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -241,7 +241,7 @@
           "nombre": "Bomba Centrífuga M-250",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__bomba-centrifuga-m250.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -249,7 +249,7 @@
           "nombre": "Uniones Rápidas – Tipo Victaulic",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__uniones-rapidas-victaulic.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -257,7 +257,7 @@
           "nombre": "Limpia Varillas",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__limpia-varillas.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -265,7 +265,7 @@
           "nombre": "Tapones de Cementación",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__tapones-cementacion.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -273,7 +273,7 @@
           "nombre": "Insertos para Válvulas",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__insertos-valvulas.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -281,7 +281,7 @@
           "nombre": "Caños Lavadores",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__canos-lavadores.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -289,7 +289,7 @@
           "nombre": "Uniones para Tanques",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__uniones-para-tanques.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -297,7 +297,7 @@
           "nombre": "Limpia Vástagos",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__limpia-vastagos.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -305,7 +305,7 @@
           "nombre": "Empaquetaduras para Vástagos",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-vastagos.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -313,7 +313,7 @@
           "nombre": "Empaquetaduras para Uniones Rápidas",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-uniones-rapidas.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -321,7 +321,7 @@
           "nombre": "Cabezas de Inyección",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__cabezas-inyeccion.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -329,7 +329,7 @@
           "nombre": "Amortiguadores de Pulsos",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__amortiguadores-pulsos.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -337,7 +337,7 @@
           "nombre": "Limpia Cables",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__limpia-cables.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -345,7 +345,7 @@
           "nombre": "Empaquetaduras para Émbolo Buzo",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-embolo-buzo.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -353,7 +353,7 @@
           "nombre": "Empaquetaduras Ratigan, Danco y Adita",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-ratigan.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -361,7 +361,7 @@
           "nombre": "Empaquetaduras para B.O.P.",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-bop.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -369,7 +369,7 @@
           "nombre": "Strippers",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__strippers.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -377,7 +377,7 @@
           "nombre": "O’Rings",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__orings.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         }
       ]
@@ -394,7 +394,7 @@
           "nombre": "Pistones",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__pistones.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": true
         },
         {
@@ -402,7 +402,7 @@
           "nombre": "Centralizadores de Varilla de Bombeo",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__centralizadores-varilla.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -410,7 +410,7 @@
           "nombre": "Empaquetaduras para Cabeza de Pozo",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-cabeza-pozo.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -418,7 +418,7 @@
           "nombre": "Bujes",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__bujes.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         }
       ]
@@ -435,7 +435,7 @@
           "nombre": "Apoyos Elastoméricos",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__apoyos-elastomericos.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": true
         },
         {
@@ -443,7 +443,7 @@
           "nombre": "Defensas y Paragolpes",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__defensas-paragolpes.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -451,7 +451,7 @@
           "nombre": "Uniones Victaulic",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__uniones-victaulic.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -459,7 +459,7 @@
           "nombre": "Empaquetaduras para Codo Giratorio",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-codo-giratorio.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -467,7 +467,7 @@
           "nombre": "Empaquetaduras para Tapa de Válvula",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-tapa-valvula.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -475,7 +475,7 @@
           "nombre": "Empaquetaduras para Camisas",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__empaquetaduras-camisas.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -483,7 +483,7 @@
           "nombre": "Paneles de Criba Vibratoria",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__paneles-criba-vibratoria.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -491,7 +491,7 @@
           "nombre": "Juntas / Empaques Moldeados",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__juntas-empaques-moldeados.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -499,7 +499,7 @@
           "nombre": "Impulsor de Bomba Centrífuga",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__impulsor-bomba-centrifuga.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         },
         {
@@ -507,7 +507,7 @@
           "nombre": "Amortiguador de Goma",
           "descripcion": "",
           "imagen": "assets/images/catalogo/mecanotecnica__amortiguador-goma.jpg",
-          "catalogoPdf": null,
+          "catalogoPdf": "assets/pdfs/CATÁLOGO OIL & GAS 2026.pdf",
           "productoPrincipal": false
         }
       ]
