@@ -210,6 +210,7 @@ function populateStage(catId) {
   /* ── Product cards ── */
   const gridEl = document.getElementById('catStageGrid');
   gridEl.innerHTML = cat.productos.map(p => buildProductCard(p, cat)).join('');
+  observeLazyImages(gridEl);
 
   /* Stagger entrance animation */
   gridEl.querySelectorAll('.cat-card').forEach((card, i) => {
@@ -238,8 +239,8 @@ function buildProductCard(producto, categoria) {
   const hasPdf    = !!producto.catalogoPdf;
   const hasSeries = producto.productosIncluidos?.length > 0;
 
-  const imgStyle = producto.imagen
-    ? `background-image:url('${producto.imagen}');background-color:transparent;`
+  const lazyBg = producto.imagen
+    ? ` data-lazy-bg="${producto.imagen}" style="background-color:transparent;"`
     : '';
 
   const fabBadge = categoria.proveedor
@@ -262,7 +263,7 @@ function buildProductCard(producto, categoria) {
 
   return `
     <article class="cat-card" data-id="${producto.id}">
-      <div class="cat-card__img${producto.imagen ? ' cat-card__img--zoomable' : ''}" style="${imgStyle}" data-img="${producto.imagen || ''}">
+      <div class="cat-card__img${producto.imagen ? ' cat-card__img--zoomable' : ''}"${lazyBg} data-img="${producto.imagen || ''}">
         ${fabBadge}
       </div>
       <div class="cat-card__body">
@@ -272,6 +273,34 @@ function buildProductCard(producto, categoria) {
         <div class="cat-card__footer">${action}</div>
       </div>
     </article>`;
+}
+
+/* Lazy-load catalog card background images when near viewport */
+const lazyBgObserver = ('IntersectionObserver' in window)
+  ? new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const url = el.dataset.lazyBg;
+        if (url) {
+          el.style.backgroundImage = `url('${url}')`;
+          delete el.dataset.lazyBg;
+        }
+        obs.unobserve(el);
+      });
+    }, { rootMargin: '200px 0px', threshold: 0.01 })
+  : null;
+
+function observeLazyImages(root) {
+  const els = (root || document).querySelectorAll('[data-lazy-bg]');
+  if (!lazyBgObserver) {
+    els.forEach(el => {
+      el.style.backgroundImage = `url('${el.dataset.lazyBg}')`;
+      delete el.dataset.lazyBg;
+    });
+    return;
+  }
+  els.forEach(el => lazyBgObserver.observe(el));
 }
 
 /* ─────────────────────────────────────────────
