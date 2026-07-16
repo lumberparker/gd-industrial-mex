@@ -37,11 +37,13 @@
 
 .presentaciones__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
 .presentaciones__item {
+  display: flex;
+  flex-direction: column;
   background: var(--color-white);
   border-radius: 8px;
   overflow: hidden;
@@ -55,7 +57,7 @@
 
 /* ── Image placeholder (replace with real background-image) ── */
 .presentaciones__img {
-  height: 190px;
+  height: 150px;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -101,6 +103,16 @@
   background-color: #0c1218;
 }
 
+.presentaciones__img--flota-pesquera {
+  background-image: url('../assets/images/flota-pesquera.png');
+  background-color: #0a1520;
+}
+
+.presentaciones__img--acuicola {
+  background-image: url('../assets/images/acuicola.png');
+  background-color: #0a1818;
+}
+
 /* Teal accent line at bottom of image */
 .presentaciones__img-overlay {
   position: absolute;
@@ -119,25 +131,32 @@
 }
 
 .presentaciones__info {
-  padding: 22px 24px 28px;
+  flex: 1;
+  padding: 14px 14px 16px;
 }
 
 .presentaciones__name {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 15px;
   color: var(--color-navy);
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+  line-height: 1.25;
 }
 
 .presentaciones__desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--color-gray);
-  line-height: 1.75;
+  line-height: 1.45;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .presentaciones__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
   .presentaciones__grid {
     grid-template-columns: repeat(2, 1fr);
   }

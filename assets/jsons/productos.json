@@ -624,7 +624,7 @@
           "nombre": "Taco Tejido para Drawworks",
           "descripcion": "Taco tejido de fricción de alta resistencia para drawworks de equipos de perforación. Coeficiente de fricción estable bajo cargas pesadas, altas temperaturas y ambientes agresivos. Fabricado con materiales libres de asbesto.",
           "imagen": "assets/images/catalogo/indubal__taco-tejido-petrolero.jpg",
-          "catalogoPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/Catalogo_de_Tacos_Petroleros_Indubal.pdf",
+          "catalogoPdf": "assets/pdfs/Catalogo_de_Tacos_Petroleros_Indubal.pdf",
           "fichaTecnicaPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/ficha_taco_tejido.pdf",
           "productoPrincipal": true
         }
@@ -642,8 +642,8 @@
           "nombre": "Rollo Tejido para Equipos de Izaje",
           "descripcion": "Rollo tejido flexible de material friccional para aplicaciones de alto rendimiento en winches de servicio, grúas de plataforma y sistemas de izaje en industria petrolera.",
           "imagen": "assets/images/catalogo/indubal__rollo-tejido-petrolero.jpg",
-          "catalogoPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/Catalogo_de_Tacos_Petroleros_Indubal.pdf",
-          "fichaTecnicaPdf": "https://indubal.com/industrias/petroleo-y-gas/catalogos/ficha_rollo_tejido.pdf",
+          "catalogoPdf": "assets/pdfs/ficha_rollo_tejido.pdf",
+          "fichaTecnicaPdf": "assets/pdfs/ficha_rollo_tejido.pdf",
           "productoPrincipal": true
         }
       ]
